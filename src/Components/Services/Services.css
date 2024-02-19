@@ -1,0 +1,76 @@
+.service {
+  padding: 100px 0;
+  background-color: #acb1b6;
+}
+.service-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 100px;
+  border-bottom: 1px solid #000000;
+  padding-bottom: 50px;
+}
+.service-tittle {
+  width: calc(20% - 50px);
+  font-size: 16px;
+  text-transform: uppercase;
+}
+.service-intro {
+  width: calc(80% - 50px);
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 200px;
+}
+.service-heading {
+  width: calc(50% - 100px);
+  font-size: 52px;
+  font-weight: 400;
+}
+.service-text {
+  width: calc(50% - 100px);
+  line-height: 1.5;
+  text-align: justify;
+}
+.service-list {
+  display: flex;
+  justify-content: flex-end;
+  padding-bottom: 20px;
+}
+.service-list ul {
+  width: 65%;
+}
+.service-link {
+  display: inline-block;
+  width: 100%;
+  position: relative;
+  padding: 60px;
+  border-bottom: 1px solid #999999;
+  color: #666666;
+  font-size: 120px;
+  font-weight: 400;
+  transition: all 0.2s linear;
+}
+.service-link span {
+  position: absolute;
+  top: 20%;
+  left: 0;
+  font-size: 32px;
+}
+.service-link i {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  font-size: 48px;
+  transform: rotate(-45deg);
+  opacity: 0;
+  transition: 0.4s all ease;
+}
+.service-link:hover {
+  color: #000000;
+  border-color: #666666;
+}
+.service-link:hover i {
+  bottom: 20%;
+  opacity: 1;
+}

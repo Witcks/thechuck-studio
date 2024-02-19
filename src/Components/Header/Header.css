@@ -1,0 +1,235 @@
+.header.is-fixed {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 1000;
+}
+
+.container-fixed {
+  max-width: 1440px;
+  margin: 0 auto;
+}
+
+.header-nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 0;
+}
+.header-logo-img {
+  width: auto;
+  height: 40px;
+  opacity: 0;
+}
+.hearder-list {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 40px;
+}
+.header-contact {
+  position: relative;
+  display: inline-block;
+  text-decoration: none;
+  text-transform: uppercase;
+  outline: 1px solid;
+  border-radius: 20px;
+  padding: 18px 84px;
+  position: relative;
+  overflow: hidden;
+  color: #000000;
+  font-size: 12px;
+  transition: color 1s;
+}
+
+.header-contact.is-show {
+  color: #ffffff;
+}
+.header-contact.dark-mode {
+  color: #ffffff;
+}
+
+.header-contact span {
+  position: absolute;
+  left: 20px;
+  top: 50%;
+  transform: translateY(-50%);
+  transition: all 0.2s linear;
+}
+.header-contact:hover span {
+  left: 32px;
+}
+.header-contact.is-show:hover span {
+  color: #000000;
+}
+.header-contact.dark-mode:hover span {
+  color: #000000;
+}
+.header-contact i {
+  font-size: 10px;
+  position: absolute;
+  right: 20px;
+  top: 54%;
+  transform: translateY(-50%);
+  transition: all 0.1s linear;
+}
+
+.header-contact:hover i {
+  right: 0px;
+  opacity: 0;
+}
+
+.header-contact::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -50px;
+  width: 150%;
+  height: 100%;
+  background-color: #ceff3d;
+  transform: scaleX(0) skewX(35deg);
+  transform-origin: left;
+  z-index: -1;
+  transition: transform 1s;
+}
+
+.header-contact.is-show::before {
+  background-color: #ffffff;
+}
+.header-contact.dark-mode::before {
+  background-color: #ffffff;
+}
+
+.header-contact:hover::before {
+  transform: scaleX(1) skewX(35deg);
+}
+.header-wrap {
+  width: 40px;
+  height: 40px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
+  background-color: #ceff3d;
+  border-radius: 10px;
+  cursor: pointer;
+  border: none;
+  box-shadow: 0px 0px 0px 2px rgb(29, 28, 36);
+}
+.hearder-line {
+  width: 50%;
+  height: 2px;
+  background-color: rgb(29, 28, 36);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  border-radius: 2px;
+}
+.hearder-line::before {
+  content: '';
+  width: 2px;
+  height: 2px;
+  background-color: #ceff3d;
+  position: absolute;
+  border-radius: 50%;
+  border: 2px solid #fff;
+  transition: all 0.3s;
+  box-shadow: 0px 0px 5px #000;
+}
+.line1::before {
+  transform: translateX(-4px);
+}
+.line2::before {
+  transform: translateX(4px);
+}
+.header-wrap:hover .line1::before {
+  transform: translateX(4px);
+}
+.header-wrap:hover .line2::before {
+  transform: translateX(-4px);
+}
+
+.menu {
+  position: fixed;
+  width: 1240px;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  list-style: none;
+  background-color: #000000;
+  color: #000000;
+  transform: translateX(100%);
+  transition: all 0.5s linear;
+  z-index: 100;
+}
+
+.menu.is-show {
+  transform: translateX(0);
+}
+
+.menu-list {
+  max-width: 1000px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  height: 94%;
+}
+.menu-left-link {
+  font-size: 72px;
+  color: #ffffff;
+  line-height: 1.3;
+  transition: all 0.2s linear;
+}
+
+.menu-left-link:hover {
+  color: #999999;
+}
+
+.menu-right-link {
+  font-size: 23px;
+  color: #ffffff;
+  line-height: 1.8;
+  transition: all 0.2s linear;
+}
+.menu-right-link:hover {
+  color: #999999;
+}
+
+.menu-left-item {
+  position: relative;
+}
+.menu-left-dropdown {
+  position: absolute;
+  top: 50px;
+  left: 280px;
+  opacity: 0;
+  transition: 0.3s ease-in-out;
+  width: 200px;
+  color: #ffffff;
+}
+.menu-left-item:hover .menu-left-dropdown {
+  opacity: 1;
+  display: block;
+}
+.menu-left-service {
+  padding-left: 50px;
+}
+.menu-service-link {
+  color: #ffffff;
+  font-size: 28px;
+  line-height: 1.5;
+  transition: 0.2s all ease-in-out;
+}
+.menu-service-link:hover {
+  color: #999999;
+}
+.menu-toggle {
+  cursor: pointer;
+  font-size: 30px;
+  position: relative;
+  z-index: 9999;
+}

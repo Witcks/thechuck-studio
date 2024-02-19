@@ -1,0 +1,95 @@
+.feedback {
+  padding: 50px 0;
+}
+.feedback-layout {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 100px;
+  padding-bottom: 50px;
+}
+.feedback-heading {
+  width: calc(20%);
+  font-size: 16px;
+  text-transform: uppercase;
+}
+.feedback-wrapper {
+  width: calc(80%);
+  overflow: hidden;
+  position: relative;
+}
+.feedback-info {
+  display: flex;
+  position: relative;
+  transition: transform 0.25s linear;
+  height: 100%;
+}
+.feedback-content {
+  font-size: 56px;
+  height: 380px;
+}
+.feedback-client {
+  height: 100%;
+  width: 100%;
+  flex: 1 0 100%;
+  user-select: none;
+}
+.feedback-user {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+.feedback-user-avatar {
+  max-width: 80px;
+  border-radius: 50%;
+}
+.feedback-user-name {
+  font-size: 20px;
+  line-height: 1.2;
+  margin-bottom: 8px;
+  font-weight: 400;
+}
+.feedback-user-position {
+  color: #acb1b6;
+  line-height: 1.2;
+}
+.feedback-bottom {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  padding-top: 50px;
+  border-top: 1px solid #acb1b6;
+}
+.feedback-job {
+  color: #acb1b6;
+  line-height: 1.2;
+  margin-right: 200px;
+}
+.feedback-nextprev {
+  display: flex;
+  gap: 30px;
+  position: absolute;
+  right: 10px;
+  bottom: -20px;
+}
+.feedback-nextprev i {
+  font-size: 32px;
+  color: #acb1b6;
+  line-height: 1.2;
+  padding: 20px;
+  cursor: pointer;
+}
+.feedback-next {
+  transform: translateX(100%);
+}
+
+.feedback-prev {
+  transform: translateX(-100%);
+}
+.feedback-current {
+  transform: translateX(0);
+}
+.feedback-container {
+  display: flex;
+  will-change: transform;
+}
