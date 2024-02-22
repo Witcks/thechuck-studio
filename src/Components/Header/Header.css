@@ -20,7 +20,9 @@
 .header-logo-img {
   width: auto;
   height: 40px;
-  opacity: 0;
+}
+.header-logo-img.dark-mode {
+  filter: invert(100%);
 }
 .hearder-list {
   display: flex;
@@ -40,7 +42,7 @@
   overflow: hidden;
   color: #000000;
   font-size: 12px;
-  transition: color 1s;
+  transition: color 0.2s;
 }
 
 .header-contact.is-show {

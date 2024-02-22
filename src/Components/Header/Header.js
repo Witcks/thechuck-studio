@@ -1,37 +1,32 @@
 import React, { useCallback, useEffect, useState } from 'react';
 import './Header.css';
 import logo from './logo.png';
-const Header = () => {
-  const [state, setState] = useState({
-    isOpen: false,
-    isDarkMode: false,
-  });
 
-  const handleScroll = useCallback(() => {
+const Header = (scrollHome, scrollAgency) => {
+  const [isOpen, setIsOpen] = useState(false);
+  const [isDarkMode, setIsDarkMode] = useState(false);
+
+  const updateDarkMode = useCallback(() => {
     const position = window.pageYOffset;
-    // Giả sử khi scroll quá 100px thì thêm class 'dark-mode'
-    const isDarkMode = position >= 2450 && position <= 5150;
-    setState((prevState) => ({
-      ...prevState,
-      isDarkMode,
-    }));
-  }, []);
+
+    const shouldActivateDarkMode = scrollAgency
+      ? position >= 2100 && position <= 10500
+      : position >= 2450 && position <= 5200;
+    setIsDarkMode(shouldActivateDarkMode);
+  }, [scrollAgency]);
 
   useEffect(() => {
-    window.addEventListener('scroll', handleScroll);
+    const eventHandler = updateDarkMode;
+    window.addEventListener('scroll', eventHandler);
+
     return () => {
-      window.removeEventListener('scroll', handleScroll);
+      window.removeEventListener('scroll', eventHandler);
     };
-  }, [handleScroll]);
+  }, [updateDarkMode]);
 
   const toggleMenu = useCallback(() => {
-    setState((prevState) => ({
-      ...prevState,
-      isOpen: !prevState.isOpen,
-    }));
+    setIsOpen((prevIsOpen) => !prevIsOpen);
   }, []);
-
-  const { isOpen, isDarkMode } = state;
 
   return (
     <div>
@@ -44,7 +39,7 @@ const Header = () => {
               <img
                 src={logo}
                 alt=""
-                className="header-logo-img"
+                className={`header-logo-img ${isDarkMode ? 'dark-mode' : ''}`}
               />
             </a>
             <div className="hearder-list">
@@ -116,7 +111,7 @@ const Header = () => {
             </li>
             <li className="menu-left-item">
               <a
-                href="?"
+                href="/about"
                 className="menu-left-link">
                 Agency
               </a>

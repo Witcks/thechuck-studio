@@ -1,40 +1,35 @@
 import React from 'react';
-import './Home.css';
-import Banner from '../Banner/Banner';
-import Clip from '../Clip/Clip';
-import People from '../People/People';
-import PeopleWork from '../PeopleWork/PeopleWork';
-import Services from '../Services/Services';
-import About from '../About/About';
-import Feedback from '../Feedback/Feedback';
 import Header from '../Header/Header';
+import BannerAgency from '../Banner/BannerAgency';
+import People from '../People/People';
+import Gallery from '../Gallery/Gallery';
+import Stroty from '../Story/Stroty';
+import Team from '../Team/Team';
+import Feedback from '../Feedback/Feedback';
 
-const Home = () => {
-  // Định nghĩa nội dung cho People component
-  const headingText = 'People we help';
+const Agency = () => {
+  const headingText = 'WHO WE ARE';
   const revealTexts = [
-    'Lorem ipsum dolor sit amet consectetur, adipisicing elit. Sint corrupti repellendus architecto fugit',
+    'Our skilled pack hunts great ideasrestlessly to ensure clients achieve the impact they want.',
   ];
   const peopleTexts = [
     'Lorem ipsum dolor sit amet consectetur, adipisicing elit. Sint corrupti repellendus architecto fugit nobis excepturi laudantium fuga sit, eligendi nesciunt nisi fugiat soluta inventore voluptatibus possimus? Laboriosam quis natus dolores.Lorem ipsum dolor sit amet consectetur, adipisicing elit. Sint corrupti repellendus architecto fugit nobis excepturi laudantium fuga sit, eligendi nesciunt nisi fugiat soluta inventore voluptatibus possimus? Laboriosam quis natus dolores.',
     'Lorem ipsum dolor sit amet consectetur, adipisicing elit. Sint corrupti repellendus architecto fugit nobis excepturi laudantium fuga sit, eligendi nesciunt nisi fugiat soluta inventore voluptatibus possimus? Laboriosam quis natus dolores.Lorem ipsum dolor sit amet consectetur, adipisicing elit. Sint corrupti repellendus architecto fugit nobis excepturi laudantium fuga sit, eligendi nesciunt nisi fugiat soluta inventore voluptatibus possimus? Laboriosam quis natus dolores.',
   ];
-
   return (
-    <section className="home">
-      <Header scrollHome={true}></Header>
-      <Banner></Banner>
-      <Clip></Clip>
+    <section className="agency">
+      <Header agencyScroll={true}></Header>
+      <BannerAgency></BannerAgency>
       <People
         headingText={headingText}
         revealTexts={revealTexts}
         peopleTexts={peopleTexts}></People>
-      <PeopleWork></PeopleWork>
-      <Services></Services>
-      <About></About>
+      <Gallery></Gallery>
+      <Stroty></Stroty>
+      <Team></Team>
       <Feedback></Feedback>
     </section>
   );
 };
 
-export default Home;
+export default Agency;

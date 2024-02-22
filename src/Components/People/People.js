@@ -6,7 +6,11 @@ import './People.css';
 
 gsap.registerPlugin(ScrollTrigger);
 
-const People = () => {
+const People = ({
+  headingText = 'People we help', // Giá trị mặc định cho tiêu đề
+  revealTexts = [], // Mảng các chuỗi cho phần reveal
+  peopleTexts = [], // Mảng các chuỗi cho phần mô tả
+}) => {
   const [isDarkMode, setIsDarkMode] = useState(false);
 
   const handleScroll = useCallback(() => {
@@ -43,42 +47,33 @@ const People = () => {
       ScrollTrigger.getAll().forEach((trigger) => trigger.kill());
     };
   }, [handleScroll]);
+
   return (
     <section className={`people ${isDarkMode ? 'dark-mode' : ''}`}>
       <div className="container">
         <div className="people-content">
-          <h3 className="people-heading">People we help</h3>
+          <h3 className="people-heading">{headingText}</h3>
           <div className="people-desc">
-            <div className="people-mark">
-              <p
-                className="reveal-type"
-                data-bg-color="#cccccc"
-                data-fg-color="#000000">
-                Lorem ipsum dolor sit amet consectetur, adipisicing elit. Sint
-                corrupti repellendus architecto fugit
-              </p>
-            </div>
+            {revealTexts.map((text, index) => (
+              <div
+                key={index}
+                className="people-mark">
+                <p
+                  className="reveal-type"
+                  data-bg-color="#cccccc"
+                  data-fg-color="#000000">
+                  {text}
+                </p>
+              </div>
+            ))}
             <div className="people-list">
-              <p className={`people-text ${isDarkMode ? 'dark-mode' : ''}`}>
-                Lorem ipsum dolor sit amet consectetur, adipisicing elit. Sint
-                corrupti repellendus architecto fugit nobis excepturi laudantium
-                fuga sit, eligendi nesciunt nisi fugiat soluta inventore
-                voluptatibus possimus? Laboriosam quis natus dolores.Lorem ipsum
-                dolor sit amet consectetur, adipisicing elit. Sint corrupti
-                repellendus architecto fugit nobis excepturi laudantium fuga
-                sit, eligendi nesciunt nisi fugiat soluta inventore voluptatibus
-                possimus? Laboriosam quis natus dolores.
-              </p>
-              <p className={`people-text ${isDarkMode ? 'dark-mode' : ''}`}>
-                Lorem ipsum dolor sit amet consectetur, adipisicing elit. Sint
-                corrupti repellendus architecto fugit nobis excepturi laudantium
-                fuga sit, eligendi nesciunt nisi fugiat soluta inventore
-                voluptatibus possimus? Laboriosam quis natus dolores.Lorem ipsum
-                dolor sit amet consectetur, adipisicing elit. Sint corrupti
-                repellendus architecto fugit nobis excepturi laudantium fuga
-                sit, eligendi nesciunt nisi fugiat soluta inventore voluptatibus
-                possimus? Laboriosam quis natus dolores.
-              </p>
+              {peopleTexts.map((text, index) => (
+                <p
+                  key={index}
+                  className={`people-text ${isDarkMode ? 'dark-mode' : ''}`}>
+                  {text}
+                </p>
+              ))}
             </div>
             <a
               href="/work"
@@ -87,81 +82,6 @@ const People = () => {
               <i className="fas fa-arrow-right"></i>
             </a>
           </div>
-        </div>
-        <div className="people-work">
-          <div className="people-work-list">
-            <div className="people-work-item">
-              <img
-                src="https://images.unsplash.com/photo-1543145223-1f9043516739?q=80&w=1887&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
-                alt=""
-                className="people-work-img"
-              />
-              <h3
-                className={`people-work-tittle ${
-                  isDarkMode ? 'dark-mode' : ''
-                }`}>
-                NewYear Job 2024
-              </h3>
-              <p className={`people-work-job ${isDarkMode ? 'dark-mode' : ''}`}>
-                Brand TheChuck,Motion Graphic & Visual
-              </p>
-            </div>
-            <div className="people-work-item">
-              <img
-                src="https://images.unsplash.com/photo-1543145223-1f9043516739?q=80&w=1887&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
-                alt=""
-                className="people-work-img"
-              />
-              <h3
-                className={`people-work-tittle ${
-                  isDarkMode ? 'dark-mode' : ''
-                }`}>
-                NewYear Job 2024
-              </h3>
-              <p className={`people-work-job ${isDarkMode ? 'dark-mode' : ''}`}>
-                Brand TheChuck,Motion Graphic & Visual
-              </p>
-            </div>
-            <div className="people-work-item">
-              <img
-                src="https://images.unsplash.com/photo-1543145223-1f9043516739?q=80&w=1887&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
-                alt=""
-                className="people-work-img"
-              />
-              <h3
-                className={`people-work-tittle ${
-                  isDarkMode ? 'dark-mode' : ''
-                }`}>
-                NewYear Job 2024
-              </h3>
-              <p className={`people-work-job ${isDarkMode ? 'dark-mode' : ''}`}>
-                Brand TheChuck, Motion Graphic & Visual
-              </p>
-            </div>
-            <div className="people-work-item">
-              <img
-                src="https://images.unsplash.com/photo-1543145223-1f9043516739?q=80&w=1887&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
-                alt=""
-                className="people-work-img"
-              />
-              <h3
-                className={`people-work-tittle ${
-                  isDarkMode ? 'dark-mode' : ''
-                }`}>
-                NewYear Job 2024
-              </h3>
-              <p className={`people-work-job ${isDarkMode ? 'dark-mode' : ''}`}>
-                Brand TheChuck,Motion Graphic & Visual
-              </p>
-            </div>
-          </div>
-          <a
-            href="/work"
-            className={`people-bottom ${isDarkMode ? 'dark-mode' : ''}`}>
-            <span className="more">More project</span>
-            <span className="just">Just click</span>
-            <i className="fas fa-arrow-right"></i>
-          </a>
         </div>
       </div>
     </section>

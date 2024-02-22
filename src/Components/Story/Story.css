@@ -1,0 +1,52 @@
+.story {
+  background-color: #000000;
+  color: #ffffff;
+  padding: 120px 0 50px 0;
+}
+.story-heading {
+  font-size: 72px;
+  max-width: 900px;
+  font-weight: 400;
+  margin-bottom: 30px;
+  line-height: 1.2;
+}
+.story-sticky {
+  position: sticky;
+  top: 110px;
+  width: 100%;
+  overflow: hidden;
+}
+.story-scroll {
+  height: 3500px;
+}
+.story-text {
+  padding-bottom: 10px;
+  font-size: 18px;
+  line-height: 1.3;
+  border-bottom: 1px solid #666666;
+}
+.story-list {
+  display: flex;
+  padding-top: 40px;
+  gap: 300px;
+}
+.story-item {
+  max-width: 600px;
+  flex: 1 0 50%;
+}
+.story-item-number {
+  font-size: 32px;
+  margin: 20px 0;
+  color: #666666;
+}
+.story-item-title {
+  font-size: 58px;
+  line-height: 1.2;
+  font-weight: 300;
+  margin: 10px 0;
+}
+.story-item-desc {
+  font-size: 18px;
+  line-height: 1.3;
+  text-align: justify;
+}

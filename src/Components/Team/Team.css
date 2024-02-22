@@ -1,0 +1,72 @@
+.team {
+  transition: 0.2s linear all;
+}
+.team.dark-mode {
+  background-color: black;
+  color: #ffffff;
+}
+.team-top {
+  padding: 50px 0;
+  border-top: 1px solid;
+}
+.team-heading {
+  font-size: 20px;
+  text-transform: uppercase;
+  text-align: center;
+}
+.team-img {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 80px 0;
+  gap: 100px;
+}
+.team-img-item {
+  max-width: 150px;
+}
+.team-img-item.dark-mode {
+  filter: invert(100%);
+}
+.team-intro {
+  display: flex;
+  align-items: flex-end;
+  gap: 100px;
+  padding: 50px 0 50px 200px;
+}
+.team-title {
+  font-size: 56px;
+  max-width: 500px;
+}
+.team-meet {
+  text-transform: uppercase;
+  line-height: 1.3;
+}
+.team-user {
+  padding: 100px 0;
+}
+.team-user-info {
+  left: 180px;
+  position: relative;
+  padding-top: 200px;
+}
+.team-user-info:nth-child(2n) {
+  left: 620px;
+}
+.team-user-img {
+  width: 600px;
+  height: 550px;
+  object-fit: cover;
+}
+.team-user-person {
+  position: absolute;
+  left: 35%;
+  top: 80%;
+  transform: translateY(-50%);
+}
+.team-user-name {
+  font-size: 62px;
+}
+.team-uset-position {
+  text-transform: uppercase;
+  padding-left: 100px;
+}

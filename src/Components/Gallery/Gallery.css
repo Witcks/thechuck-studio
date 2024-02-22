@@ -1,0 +1,33 @@
+.gallery {
+  background-color: #ffffff;
+  padding: 50px;
+  height: 700px;
+  overflow: hidden;
+}
+.gallery-wrapper {
+  display: flex;
+  position: relative;
+  height: 100%;
+  gap: 50px;
+  white-space: nowrap;
+  overflow: visible;
+  transform: translate(-378%);
+  animation: transfrom-animation 60s infinite linear;
+}
+.gallery__item {
+  flex: 1 0 35%;
+}
+.gallery__img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+@keyframes transfrom-animation {
+  from {
+    transform: translateX(0%);
+  }
+  to {
+    transform: translate(-430%);
+  }
+}
