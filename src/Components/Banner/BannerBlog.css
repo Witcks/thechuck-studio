@@ -1,0 +1,57 @@
+.blog-banner {
+  padding: 180px 0 80px 0;
+}
+.blog-banner-top {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 120px;
+  padding-bottom: 100px;
+}
+.blog-banner-heading {
+  font-size: 102px;
+  max-width: 900px;
+  font-weight: 400;
+  line-height: 1.2;
+}
+.blog-banner-text {
+  max-width: 500px;
+  text-align: justify;
+}
+.blog-banner-bottom {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  padding-top: 30px;
+  border-top: 1px solid #777777;
+}
+.blog-banner-company {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 50px;
+}
+.blog-banner-name {
+  font-size: 18px;
+  font-weight: bold;
+  margin-bottom: 10px;
+  text-transform: uppercase;
+}
+.blog-banner-job {
+  text-transform: uppercase;
+}
+.blog-banner-desc {
+  position: relative;
+  font-size: 18px;
+  max-width: 700px;
+  text-align: right;
+  line-height: 1.3;
+}
+.blog-banner-desc::before {
+  position: absolute;
+  content: '';
+  width: 100%;
+  top: -31px;
+  height: 1px;
+  background-color: #000000;
+}

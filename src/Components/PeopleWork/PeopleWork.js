@@ -1,20 +1,19 @@
-import React, { useEffect, useState, useCallback } from 'react';
+import React, { useEffect, useState } from 'react';
 import './PeopleWork.css';
 
-const People = () => {
+const People = ({ determineDarkMode }) => {
   const [isDarkMode, setIsDarkMode] = useState(false);
 
-  const handleScroll = useCallback(() => {
-    const position = window.pageYOffset;
-    setIsDarkMode(position >= 2450);
-  }, []);
-
   useEffect(() => {
-    window.addEventListener('scroll', handleScroll);
-    return () => {
-      window.removeEventListener('scroll', handleScroll);
+    const updateDarkMode = () => {
+      const position = window.pageYOffset;
+      const shouldActivateDarkMode = determineDarkMode(position);
+      setIsDarkMode(shouldActivateDarkMode);
     };
-  }, [handleScroll]);
+
+    window.addEventListener('scroll', updateDarkMode);
+    return () => window.removeEventListener('scroll', updateDarkMode);
+  }, [determineDarkMode]);
   return (
     <section className={`people ${isDarkMode ? 'dark-mode' : ''}`}>
       <div className="container">

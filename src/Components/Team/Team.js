@@ -71,7 +71,7 @@ const Team = () => {
               alt=""
               className="team-user-img"
             />
-            <div className="team-user-person">
+            <div className="team-user-person right">
               <h3 className="team-user-name">Đình Trúc</h3>
               <p className="team-uset-position">Founder, Head of motion</p>
             </div>
@@ -93,7 +93,7 @@ const Team = () => {
               alt=""
               className="team-user-img"
             />
-            <div className="team-user-person">
+            <div className="team-user-person right">
               <h3 className="team-user-name">Đình Trúc</h3>
               <p className="team-uset-position">Founder, Head of motion</p>
             </div>

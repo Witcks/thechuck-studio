@@ -1,0 +1,97 @@
+.blog-mail {
+  padding: 100px 0 100px 200px;
+  background-color: #f4f6f7;
+}
+.blog-mail-heading {
+  font-size: 56px;
+  font-weight: 400;
+  line-height: 1.2;
+  max-width: 550px;
+  margin-bottom: 20px;
+}
+.blog-mail-desc {
+  max-width: 700px;
+  text-align: justify;
+  line-height: 1.5;
+  color: #444444;
+  margin-bottom: 20px;
+}
+.blog-mail-title {
+  font-size: 26px;
+  font-weight: 400;
+  margin-bottom: 20px;
+}
+.blog-mail-input {
+  width: 700px;
+  padding: 20px 0 20px 20px;
+  font-size: 26px;
+  border-bottom: 1px solid #444444;
+  border-top: transparent;
+  border-left: transparent;
+  border-right: transparent;
+  background-color: #f4f6f7;
+}
+
+.blog-mail-button {
+  position: relative;
+  display: block;
+  text-decoration: none;
+  text-transform: uppercase;
+  outline: 1px solid;
+  border-radius: 20px;
+  padding: 18px 64px;
+  position: relative;
+  overflow: hidden;
+  color: #000000;
+  font-size: 12px;
+  transition: color 1s;
+  border: 1px solid #444444;
+  margin-top: 20px;
+}
+
+.blog-mail-button span {
+  position: absolute;
+  left: 20px;
+  top: 50%;
+  transform: translateY(-50%);
+  transition: all 0.2s linear;
+}
+.blog-mail-button:hover span {
+  left: 32px;
+}
+
+.blog-mail-button i {
+  font-size: 10px;
+  position: absolute;
+  right: 20px;
+  top: 54%;
+  transform: translateY(-50%);
+  transition: all 0.1s linear;
+}
+
+.blog-mail-button:hover i {
+  right: 0px;
+  opacity: 0;
+}
+
+.blog-mail-button::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -50px;
+  width: 150%;
+  height: 100%;
+  background-color: #ceff3d;
+  transform: scaleX(0) skewX(35deg);
+  transform-origin: left;
+  z-index: -1;
+  transition: transform 1s;
+}
+
+.blog-mail-button:hover::before {
+  transform: scaleX(1) skewX(35deg);
+}
+.blog-mail-text {
+  font-size: 12px;
+  margin-top: 10px;
+}

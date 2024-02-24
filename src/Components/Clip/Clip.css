@@ -30,8 +30,8 @@
   left: 50%;
   transform: translate(-50%, -50%);
   width: 100%;
-  font-size: 64px;
+  font-size: 124px;
   overflow: hidden;
-  font-family: 'Druk Wide';
   z-index: 1;
+  display: flex;
 }

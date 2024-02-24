@@ -21,35 +21,47 @@ const Services = () => {
           <ul>
             <li className="service-item">
               <a
-                href="/service"
+                href="/2d-motion-graphic"
                 className="service-link">
                 <span>01</span>
-                Service
+                2D Motion Graphic
                 <i className="fas fa-arrow-right"></i>
               </a>
             </li>
             <li className="service-item">
               <a
-                href="/service"
+                href="/video-production"
                 className="service-link">
                 {' '}
-                <span>02</span> Service <i className="fas fa-arrow-right"></i>
+                <span>02</span> Video Production
+                <i className="fas fa-arrow-right"></i>
               </a>
             </li>
             <li className="service-item">
               <a
-                href="/service"
+                href="/brand-identity"
                 className="service-link">
                 {' '}
-                <span>03</span> Service <i className="fas fa-arrow-right"></i>
+                <span>03</span> Brand Identity{' '}
+                <i className="fas fa-arrow-right"></i>
               </a>
             </li>
             <li className="service-item">
               <a
-                href="/service"
+                href="/web-design"
                 className="service-link">
                 {' '}
-                <span>04</span> Service <i className="fas fa-arrow-right"></i>
+                <span>04</span> Web Design{' '}
+                <i className="fas fa-arrow-right"></i>
+              </a>
+            </li>
+            <li className="service-item">
+              <a
+                href="/ui-ux-design"
+                className="service-link">
+                {' '}
+                <span>05</span> UI/UX Design{' '}
+                <i className="fas fa-arrow-right"></i>
               </a>
             </li>
           </ul>

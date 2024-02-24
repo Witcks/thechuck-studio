@@ -1,0 +1,185 @@
+.form-contact {
+  padding: 80px 0;
+}
+.form-contact-list {
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  gap: 200px;
+}
+.form-contact-info {
+  max-width: 750px;
+}
+.form-contact-tittle {
+  font-size: 25px;
+  font-weight: 400;
+  max-width: 600px;
+  line-height: 1.3;
+  margin-bottom: 20px;
+}
+.form-contanct-service {
+  font-size: 20px;
+  padding: 30px 0 30px 0;
+}
+.form-service-name {
+  font-size: 14px;
+  font-weight: 300;
+  text-transform: uppercase;
+}
+.form-service-item input {
+  position: absolute;
+  opacity: 0;
+  cursor: pointer;
+  height: 0;
+  width: 0;
+}
+.form-service-list {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+}
+.form-service-item {
+  display: flex;
+  position: relative;
+  cursor: pointer;
+  font-size: 18px;
+  user-select: none;
+  gap: 12px;
+}
+.checkmark {
+  position: relative;
+  top: 0;
+  left: 0;
+  height: 20px;
+  width: 20px;
+  background: black;
+  border-radius: 50px;
+  transition: all 0.7s;
+  --spread: 12px;
+}
+.form-service-item input:checked ~ .checkmark {
+  background: black;
+  box-shadow: 0px 0px var(--spread) -2px #ceff3d,
+    0 0px var(--spread) -2px #ceff3d, 0px 0px var(--spread) -2px #ceff3d,
+    0px 0 var(--spread) -2px #ceff3d, 0px 0px var(--spread) -2px #ceff3d,
+    0 0px var(--spread) -2px #ceff3d, 0px 0px var(--spread) -2px #ceff3d;
+}
+.checkmark:after {
+  content: '';
+  position: absolute;
+  display: none;
+}
+.form-service-item input:checked ~ .checkmark:after {
+  display: block;
+}
+.form-service-item .checkmark:after {
+  left: 0.45em;
+  top: 0.25em;
+  width: 0.25em;
+  height: 0.5em;
+  border: solid #ceff3d;
+  border-width: 0 0.15em 0.15em 0;
+  transform: rotate(45deg);
+}
+.form-contact-detail {
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 1.2;
+  margin-bottom: 10px;
+}
+.form-contact-socials {
+  font-size: 18px;
+  color: #777777;
+  padding: 50px 0 20px 0;
+}
+.form-socials-item {
+  margin-bottom: 10px;
+}
+.form-social-link {
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 1.3;
+  color: #000000;
+  transition: all 0.5s linear;
+}
+.form-social-link:hover {
+  color: #444444;
+}
+.form-contact-client {
+  padding-top: 100px;
+  padding-bottom: 50px;
+  font-size: 26px;
+  font-weight: 400;
+}
+.form-client {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 50px;
+  gap: 20px;
+}
+.form-name {
+  width: 300px;
+  padding: 12px 0;
+  font-size: 18px;
+  border-bottom: 1px solid #777777;
+  border-top: transparent;
+  border-left: transparent;
+  border-right: transparent;
+}
+.form-client-info span {
+  display: block;
+  margin-bottom: 20px;
+  font-size: 20px;
+}
+.form-company {
+  width: 100%;
+  padding: 12px 0;
+  font-size: 18px;
+  border-bottom: 1px solid #777777;
+  border-top: transparent;
+  border-left: transparent;
+  border-right: transparent;
+}
+.form-client-button {
+  position: relative;
+  display: block;
+  text-decoration: none;
+  text-transform: uppercase;
+  outline: 1px solid;
+  border-radius: 20px;
+  padding: 18px 64px;
+  position: relative;
+  overflow: hidden;
+  color: #000000;
+  font-size: 12px;
+  transition: color 1s;
+  border: 1px solid #444444;
+  margin-top: 20px;
+}
+
+.form-client-button span {
+  position: absolute;
+  left: 20px;
+  top: 50%;
+  transform: translateY(-50%);
+  transition: all 0.2s linear;
+}
+.form-client-button:hover span {
+  left: 28px;
+}
+
+.form-client-button i {
+  font-size: 10px;
+  position: absolute;
+  right: 20px;
+  top: 54%;
+  transform: translateY(-50%);
+  transition: all 0.1s linear;
+}
+
+.form-client-button:hover i {
+  right: 0px;
+  opacity: 0;
+}

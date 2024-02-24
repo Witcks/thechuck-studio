@@ -96,11 +96,14 @@
   transition: transform 1s;
 }
 
-.header-contact.is-show::before {
+.header-contact.dark-mode::before {
+  background-color: #ffffff;
+}
+.header-contact.green::before {
   background-color: #ffffff;
 }
 .header-contact.dark-mode::before {
-  background-color: #ffffff;
+  background-color: #ceff3d;
 }
 
 .header-contact:hover::before {
@@ -185,6 +188,7 @@
   color: #ffffff;
   line-height: 1.3;
   transition: all 0.2s linear;
+  cursor: pointer;
 }
 
 .menu-left-link:hover {
@@ -210,12 +214,14 @@
   left: 280px;
   opacity: 0;
   transition: 0.3s ease-in-out;
-  width: 200px;
+  width: 300px;
   color: #ffffff;
+  z-index: -2;
 }
 .menu-left-item:hover .menu-left-dropdown {
   opacity: 1;
   display: block;
+  z-index: 2;
 }
 .menu-left-service {
   padding-left: 50px;

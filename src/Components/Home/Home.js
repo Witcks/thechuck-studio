@@ -22,14 +22,19 @@ const Home = () => {
 
   return (
     <section className="home">
-      <Header scrollHome={true}></Header>
+      <Header
+        determineDarkMode={(position) => position >= 2450 && position <= 5200}
+        determineGreenMode={(position) =>
+          position >= 0 && position <= 500
+        }></Header>
       <Banner></Banner>
       <Clip></Clip>
       <People
         headingText={headingText}
         revealTexts={revealTexts}
         peopleTexts={peopleTexts}></People>
-      <PeopleWork></PeopleWork>
+      <PeopleWork
+        determineDarkMode={(position) => position >= 2450}></PeopleWork>
       <Services></Services>
       <About></About>
       <Feedback></Feedback>

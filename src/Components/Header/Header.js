@@ -1,32 +1,29 @@
-import React, { useCallback, useEffect, useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import './Header.css';
 import logo from './logo.png';
 
-const Header = (scrollHome, scrollAgency) => {
+const Header = ({
+  determineDarkMode = () => false,
+  determineGreenMode = () => false,
+}) => {
   const [isOpen, setIsOpen] = useState(false);
   const [isDarkMode, setIsDarkMode] = useState(false);
-
-  const updateDarkMode = useCallback(() => {
-    const position = window.pageYOffset;
-
-    const shouldActivateDarkMode = scrollAgency
-      ? position >= 2100 && position <= 10500
-      : position >= 2450 && position <= 5200;
-    setIsDarkMode(shouldActivateDarkMode);
-  }, [scrollAgency]);
+  const [isGreenMode, setIsGreenMode] = useState(false);
 
   useEffect(() => {
-    const eventHandler = updateDarkMode;
-    window.addEventListener('scroll', eventHandler);
-
-    return () => {
-      window.removeEventListener('scroll', eventHandler);
+    const updateDarkMode = () => {
+      const position = window.pageYOffset;
+      setIsDarkMode(determineDarkMode(position));
+      setIsGreenMode(determineGreenMode(position));
     };
-  }, [updateDarkMode]);
 
-  const toggleMenu = useCallback(() => {
+    window.addEventListener('scroll', updateDarkMode);
+    return () => window.removeEventListener('scroll', updateDarkMode);
+  }, [determineDarkMode, determineGreenMode]);
+
+  const toggleMenu = () => {
     setIsOpen((prevIsOpen) => !prevIsOpen);
-  }, []);
+  };
 
   return (
     <div>
@@ -47,7 +44,7 @@ const Header = (scrollHome, scrollAgency) => {
                 href="/contact"
                 className={`header-contact ${isOpen ? 'is-show' : ''} ${
                   isDarkMode ? 'dark-mode' : ''
-                }`}>
+                } ${isGreenMode ? 'green' : ''}`}>
                 <span>Start a project</span>
                 <i className="fas fa-arrow-right"></i>
               </a>
@@ -67,44 +64,47 @@ const Header = (scrollHome, scrollAgency) => {
           <ul className="menu-left">
             <li className="menu-left-item">
               <a
-                href="?"
+                href="/work"
                 className="menu-left-link">
                 Work
               </a>
             </li>
             <li className="menu-left-item">
-              <a
-                href="?"
-                className="menu-left-link">
-                Services
-              </a>
+              <span className="menu-left-link">Services</span>
               <ul className="menu-left-dropdown">
                 <li className="menu-left-service">
                   <a
-                    href="?"
+                    href="/2d-motion-graphic"
                     className="menu-service-link">
-                    Services
+                    2D Motion Graphic
                   </a>
                 </li>
                 <li className="menu-left-service">
                   <a
-                    href="?"
+                    href="/video-production"
                     className="menu-service-link">
-                    Services
+                    Video Production
                   </a>
                 </li>
                 <li className="menu-left-service">
                   <a
-                    href="?"
+                    href="/brand-identity"
                     className="menu-service-link">
-                    Services
+                    Brand Identity
                   </a>
                 </li>
                 <li className="menu-left-service">
                   <a
-                    href="?"
+                    href="/web-design"
                     className="menu-service-link">
-                    Services
+                    Web Design
+                  </a>
+                </li>
+                <li className="menu-left-service">
+                  <a
+                    href="/ui-ux-design"
+                    className="menu-service-link">
+                    UI/UX Design
                   </a>
                 </li>
               </ul>
@@ -118,7 +118,7 @@ const Header = (scrollHome, scrollAgency) => {
             </li>
             <li className="menu-left-item">
               <a
-                href="?"
+                href="/blog"
                 className="menu-left-link">
                 Blog
               </a>

@@ -16,7 +16,7 @@ const Footer = () => {
       <div
         id="two"
         className="footer-contact">
-        <span>Let's Talk Let's Talk</span>
+        <span>Let's Work Together</span>
       </div>
       <div className="container">
         <div className="footer-content">
@@ -40,21 +40,21 @@ const Footer = () => {
               </li>
               <li className="footer-item">
                 <a
-                  href="/"
+                  href="/work"
                   className="footer-link">
                   Work
                 </a>
               </li>
               <li className="footer-item">
                 <a
-                  href="/"
+                  href="/about"
                   className="footer-link">
                   Agency
                 </a>
               </li>
               <li className="footer-item">
                 <a
-                  href="/"
+                  href="/blog"
                   className="footer-link">
                   Blog
                 </a>
@@ -77,30 +77,37 @@ const Footer = () => {
             <ul className="footer-list">
               <li className="footer-item">
                 <a
-                  href="/"
+                  href="/2d-motion-graphic"
                   className="footer-link">
-                  Service
+                  2D Motion Graphic
                 </a>
               </li>
               <li className="footer-item">
                 <a
-                  href="/"
+                  href="/video-production"
                   className="footer-link">
-                  Service
+                  Video Production
                 </a>
               </li>
               <li className="footer-item">
                 <a
-                  href="/"
+                  href="/brand-identity"
                   className="footer-link">
-                  Service
+                  Brand Identity
                 </a>
               </li>
               <li className="footer-item">
                 <a
-                  href="/"
+                  href="/web-design"
                   className="footer-link">
-                  Service
+                  Web Design
+                </a>
+              </li>
+              <li className="footer-item">
+                <a
+                  href="/ui-ux-design"
+                  className="footer-link">
+                  UI/UX Design
                 </a>
               </li>
             </ul>

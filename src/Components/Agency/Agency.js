@@ -18,7 +18,10 @@ const Agency = () => {
   ];
   return (
     <section className="agency">
-      <Header agencyScroll={true}></Header>
+      <Header
+        determineDarkMode={(position) =>
+          position >= 2100 && position <= 10500
+        }></Header>
       <BannerAgency></BannerAgency>
       <People
         headingText={headingText}

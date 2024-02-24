@@ -1,0 +1,57 @@
+.service-banner {
+  background-color: #acb1b6;
+  padding: 240px 0 80px 0;
+}
+.service-banner-top {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 120px;
+  padding-bottom: 100px;
+}
+.service-banner-heading {
+  font-size: 102px;
+  color: #000000;
+  font-weight: 400;
+  line-height: 1.2;
+}
+.service-banner-bottom {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  padding-top: 30px;
+  border-top: 1px solid #777777;
+}
+.service-banner-company {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 50px;
+}
+.service-banner-name {
+  color: #000000;
+  font-size: 18px;
+  font-weight: bold;
+  margin-bottom: 10px;
+  text-transform: uppercase;
+}
+.service-banner-job {
+  color: #000000;
+  text-transform: uppercase;
+}
+.service-banner-desc {
+  position: relative;
+  color: #000000;
+  font-size: 18px;
+  max-width: 700px;
+  text-align: right;
+  line-height: 1.3;
+}
+.service-banner-desc::before {
+  position: absolute;
+  content: '';
+  width: 100%;
+  top: -31px;
+  height: 1px;
+  background-color: #000000;
+}

@@ -80,14 +80,11 @@ const Clip = () => {
           <h2
             className="text-header-left"
             ref={headerLeftRef}>
-            We are the story <br />
             We are the story
           </h2>
           <h2
             className="text-header-right"
             ref={headerRightRef}>
-            We are the story
-            <br />
             We are the story
           </h2>
         </div>
