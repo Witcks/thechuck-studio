@@ -7,6 +7,9 @@
   justify-content: space-between;
   align-items: center;
 }
+.banner-wrapper {
+  position: relative;
+}
 .banner-tittle {
   font-family: 'Druk Wide';
   font-size: 72px;
@@ -53,6 +56,14 @@
 }
 .banner-button:hover {
   background-color: #ffffff;
+}
+.banner-3d {
+  position: absolute;
+  top: 30%;
+  left: 70%;
+  transform: translate(-25%, -25%);
+  height: 600px;
+  width: 500px;
 }
 .banner-button:hover .cricle {
   filter: invert(100%);

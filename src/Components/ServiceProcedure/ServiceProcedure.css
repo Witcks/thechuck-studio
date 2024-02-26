@@ -1,0 +1,54 @@
+.service-procedure {
+  padding: 50px 0;
+  transition: 0.3s all linear;
+}
+.service-procedure.dark-mode {
+  background-color: #000000;
+  color: #ffffff;
+}
+.service-procedure-heading {
+  font-size: 71px;
+  font-weight: 400;
+  padding: 50px 0 50px 50px;
+  line-height: 1.2;
+}
+.service-procedure-list {
+  display: grid;
+  grid-template-columns: repeat(3, 2fr);
+  grid-column-gap: 40px;
+  grid-row-gap: 40px;
+  padding: 0 50px;
+}
+.service-procedure-item {
+  padding: 20px;
+  border: 1px solid #323435;
+  background-color: #0c0c0c;
+  min-height: 380px;
+}
+.service-procedure-tittle {
+  color: #ffffff;
+  font-size: 32px;
+  font-weight: 400;
+  margin: 20px 0;
+  line-height: 1.2;
+}
+.service-procedure-dessc {
+  color: #ffffff;
+  font-size: 20px;
+  font-weight: 300;
+  line-height: 1.3;
+  margin-bottom: 20px;
+}
+.service-procedure-text {
+  font-size: 20px;
+  font-weight: 300;
+  padding: 200px 0 0 50px;
+  line-height: 1.2;
+  text-transform: uppercase;
+}
+.service-procedure-work {
+  font-size: 71px;
+  font-weight: 400;
+  padding: 0 0 0 50px;
+  line-height: 1.2;
+}

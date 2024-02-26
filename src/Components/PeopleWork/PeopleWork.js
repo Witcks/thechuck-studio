@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import './PeopleWork.css';
 
-const People = ({ determineDarkMode }) => {
+const PeopleWork = ({ determineDarkMode }) => {
   const [isDarkMode, setIsDarkMode] = useState(false);
 
   useEffect(() => {
@@ -97,4 +97,4 @@ const People = ({ determineDarkMode }) => {
   );
 };
 
-export default People;
+export default PeopleWork;

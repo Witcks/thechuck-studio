@@ -7,11 +7,14 @@ import Work from './Components/Work/Work';
 import Blog from './Components/Blog/Blog';
 import Contact from './Components/Contact/Contact';
 import ServiceDetail from './Components/ServiceDetail/ServiceDetail';
+import BlogDetail from './Components/BlogDetail/BlogDetail';
+import Loading from './Components/Loading/Loading';
 
 function App() {
   return (
     <BrowserRouter basename="/">
       <div className="wapper">
+        <Loading />
         <main className="main">
           <Routes>
             <Route
@@ -40,9 +43,14 @@ function App() {
               element={<Contact />}
             />
             <Route
-              path="/service-detail"
+              path="/2d-motion-graphic"
               exact
               element={<ServiceDetail />}
+            />
+            <Route
+              path="/blog/1"
+              exact
+              element={<BlogDetail />}
             />
           </Routes>
         </main>

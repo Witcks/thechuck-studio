@@ -41,6 +41,7 @@
 }
 .form-service-item {
   display: flex;
+  align-items: center;
   position: relative;
   cursor: pointer;
   font-size: 18px;

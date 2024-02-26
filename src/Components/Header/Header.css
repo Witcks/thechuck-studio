@@ -20,6 +20,7 @@
 .header-logo-img {
   width: auto;
   height: 40px;
+  transition: 0.3s all linear;
 }
 .header-logo-img.dark-mode {
   filter: invert(100%);

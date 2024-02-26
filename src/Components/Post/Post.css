@@ -18,11 +18,13 @@
   max-width: 550px;
   line-height: 1.2;
   margin-bottom: 20px;
+  color: black;
 }
 .post-desc {
   line-height: 1.5;
   text-align: justify;
   margin-bottom: 30px;
+  color: black;
 }
 .post-author {
   display: flex;
@@ -35,9 +37,15 @@
   align-items: center;
   gap: 30px;
 }
+.post-author-name {
+  color: black;
+}
 .post-author-avatar {
   width: 60px;
   height: 60px;
   border-radius: 50%;
   object-fit: cover;
+}
+.post-author-day {
+  color: black;
 }

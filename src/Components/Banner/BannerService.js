@@ -6,7 +6,7 @@ const BannerService = () => {
     <section className="service-banner">
       <div className="container">
         <div className="service-banner-top">
-          <h1 className="service-banner-heading">Web Design</h1>
+          <h1 className="service-banner-heading">2D Motion Graphic</h1>
         </div>
         <div className="service-banner-bottom">
           <div className="service-banner-company">

@@ -1,0 +1,18 @@
+.service-image {
+  padding: 80px 0;
+  transition: 0.3s all linear;
+}
+.service-image.dark-mode {
+  background-color: black;
+}
+.service-image-list {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-column-gap: 40px;
+  grid-row-gap: 40px;
+}
+.service-image-item {
+  height: 500px;
+  width: 350px;
+  object-fit: cover;
+}
