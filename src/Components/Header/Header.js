@@ -76,28 +76,32 @@ const Header = ({
                 <li className="menu-left-service">
                   <Link
                     to="/2d-motion-graphic"
-                    className="menu-service-link">
+                    className="menu-service-link"
+                    onClick={toggleMenu}>
                     2D Motion Graphic
                   </Link>
                 </li>
                 <li className="menu-left-service">
                   <Link
                     to="/video-production"
-                    className="menu-service-link">
+                    className="menu-service-link"
+                    onClick={toggleMenu}>
                     Video Production
                   </Link>
                 </li>
                 <li className="menu-left-service">
                   <Link
                     to="/brand-identity"
-                    className="menu-service-link">
+                    className="menu-service-link"
+                    onClick={toggleMenu}>
                     Brand Identity
                   </Link>
                 </li>
                 <li className="menu-left-service">
                   <Link
                     to="/web-design"
-                    className="menu-service-link">
+                    className="menu-service-link"
+                    onClick={toggleMenu}>
                     Web Design
                   </Link>
                 </li>
