@@ -19,9 +19,38 @@ const Agency = () => {
   return (
     <section className="agency">
       <Header
-        determineDarkMode={(position) =>
-          position >= 2100 && position <= 10500
-        }></Header>
+        determineDarkMode={(position) => {
+          if (window.innerWidth >= 1440) {
+            if (position >= 2100 && position <= 5830) {
+              return true;
+            }
+            if (position >= 6500 && position <= 10520) {
+              return true;
+            }
+          } else if (window.innerWidth >= 1280) {
+            if (position >= 2280 && position <= 5950) {
+              return true;
+            }
+            if (position >= 6520 && position <= 10640) {
+              return true;
+            }
+          } else if (window.innerWidth >= 1024) {
+            if (position >= 1730 && position <= 4910) {
+              return true;
+            }
+            if (position >= 5350 && position <= 8960) {
+              return true;
+            }
+          } else if (window.innerWidth >= 768) {
+            if (position >= 1780 && position <= 7230) {
+              return true;
+            }
+          } else {
+            if (position >= 1970 && position <= 6880) {
+              return true;
+            }
+          }
+        }}></Header>
       <BannerAgency></BannerAgency>
       <People
         headingText={headingText}

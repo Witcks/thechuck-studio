@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import './Services.css';
 
 const Services = () => {
@@ -20,49 +21,40 @@ const Services = () => {
         <div className="service-list">
           <ul>
             <li className="service-item">
-              <a
-                href="/2d-motion-graphic"
+              <Link
+                to="/2d-motion-graphic"
                 className="service-link">
                 <span>01</span>
                 2D Motion Graphic
                 <i className="fas fa-arrow-right"></i>
-              </a>
+              </Link>
             </li>
             <li className="service-item">
-              <a
-                href="/video-production"
+              <Link
+                to="/video-production"
                 className="service-link">
                 {' '}
                 <span>02</span> Video Production
                 <i className="fas fa-arrow-right"></i>
-              </a>
+              </Link>
             </li>
             <li className="service-item">
-              <a
-                href="/brand-identity"
+              <Link
+                to="/brand-identity"
                 className="service-link">
                 {' '}
                 <span>03</span> Brand Identity{' '}
                 <i className="fas fa-arrow-right"></i>
-              </a>
+              </Link>
             </li>
             <li className="service-item">
-              <a
-                href="/web-design"
+              <Link
+                to="/web-design"
                 className="service-link">
                 {' '}
                 <span>04</span> Web Design{' '}
                 <i className="fas fa-arrow-right"></i>
-              </a>
-            </li>
-            <li className="service-item">
-              <a
-                href="/ui-ux-design"
-                className="service-link">
-                {' '}
-                <span>05</span> UI/UX Design{' '}
-                <i className="fas fa-arrow-right"></i>
-              </a>
+              </Link>
             </li>
           </ul>
         </div>

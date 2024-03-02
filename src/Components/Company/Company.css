@@ -101,3 +101,47 @@
   font-size: 12px;
   margin: 20px 0;
 }
+@media screen and (max-width: 1279px) {
+  .company {
+    padding: 80px 0;
+  }
+  .company-list {
+    display: block;
+  }
+  .company-img {
+    display: inline-block;
+    position: relative;
+    left: 50%;
+    transform: translateX(-50%);
+    max-width: 100%;
+    max-height: 500px;
+  }
+  .company-info {
+    padding-top: 30px;
+    text-align: center;
+  }
+  .company-heading {
+    font-size: 48px;
+  }
+  .company-desc {
+    max-width: 100%;
+    text-align: center;
+  }
+}
+@media screen and (max-width: 1023px) {
+  .company-heading {
+    font-size: 36px;
+  }
+  .company-info {
+    padding-top: 20px;
+  }
+}
+@media screen and (max-width: 767px) {
+  .company-heading {
+    font-size: 26px;
+  }
+  .company-desc {
+    font-size: 14px;
+    line-height: 1.3;
+  }
+}

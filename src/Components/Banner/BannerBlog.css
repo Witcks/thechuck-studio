@@ -55,3 +55,48 @@
   height: 1px;
   background-color: #000000;
 }
+@media screen and (max-width: 1279px) {
+  .blog-banner-top {
+    gap: 50px;
+  }
+  .blog-banner-heading {
+    font-size: 86px;
+  }
+  .blog-banner-bottom {
+    display: block;
+  }
+  .blog-banner-company {
+    justify-content: space-between;
+  }
+  .blog-banner-desc {
+    display: none;
+  }
+}
+@media screen and (max-width: 1023px) {
+  .blog-banner {
+    padding: 180px 0 40px 0;
+  }
+  .blog-banner-top {
+    display: block;
+    padding-bottom: 60px;
+  }
+  .blog-banner-heading {
+    font-size: 72px;
+    margin-bottom: 30px;
+  }
+  .blog-banner-text {
+    line-height: 1.4;
+    max-width: 400px;
+  }
+}
+@media screen and (max-width: 767px) {
+  .blog-banner-top {
+    padding-bottom: 40px;
+  }
+  .blog-banner-name {
+    font-size: 16px;
+  }
+  .blog-banner-job {
+    font-size: 14px;
+  }
+}

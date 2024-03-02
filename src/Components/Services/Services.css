@@ -74,3 +74,122 @@
   bottom: 20%;
   opacity: 1;
 }
+@media screen and (min-width: 1440px) {
+  .service-intro {
+    gap: 100px;
+  }
+  .service-heading {
+    width: calc(50% - 50px);
+  }
+  .service-text {
+    width: calc(50% - 50px);
+  }
+  .service-link {
+    padding: 60px;
+    font-size: 94px;
+  }
+}
+@media screen and (max-width: 1439px) {
+  .service-intro {
+    gap: 60px;
+  }
+  .service-heading {
+    width: calc(50% - 30px);
+  }
+  .service-text {
+    width: calc(50% - 30px);
+  }
+  .service-link {
+    padding: 40px 0 40px 60px;
+    font-size: 86px;
+  }
+}
+@media screen and (max-width: 1279px) {
+  .service {
+    padding: 80px 0;
+  }
+  .service-header {
+    gap: 50px;
+  }
+  .service-tittle {
+    width: calc(20% - 25px);
+  }
+  .service-intro {
+    width: calc(80% - 25px);
+    gap: 40px;
+  }
+  .service-heading {
+    width: calc(50% - 20px);
+    font-size: 42px;
+  }
+  .service-list ul {
+    width: 85%;
+  }
+  .service-text {
+    width: calc(50% - 20px);
+  }
+  .service-link {
+    padding: 30px 0 30px 40px;
+    font-size: 72px;
+  }
+  .service-link span {
+    font-size: 28px;
+  }
+}
+@media screen and (max-width: 1023px) {
+  .service {
+    padding: 60px 0;
+  }
+  .service-header {
+    display: block;
+  }
+  .service-tittle {
+    width: calc(100%);
+    padding-bottom: 30px;
+  }
+  .service-intro {
+    width: calc(100%);
+    gap: 30px;
+  }
+  .service-heading {
+    width: calc(50% - 15px);
+    font-size: 38px;
+  }
+  .service-text {
+    width: calc(50% - 15px);
+  }
+  .service-list ul {
+    width: 90%;
+  }
+  .service-link {
+    padding: 30px 0 30px 30px;
+    font-size: 56px;
+  }
+  .service-link span {
+    font-size: 18px;
+  }
+}
+@media screen and (max-width: 767px) {
+  .service-header {
+    display: block;
+  }
+  .service-intro {
+    display: block;
+    width: calc(100%);
+  }
+  .service-heading {
+    width: calc(100%);
+    font-size: 38px;
+    margin-bottom: 20px;
+  }
+  .service-text {
+    width: calc(100%);
+  }
+
+  .service-link {
+    font-size: 36px;
+  }
+  .service-link span {
+    font-size: 16px;
+  }
+}

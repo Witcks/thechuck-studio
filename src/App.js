@@ -43,7 +43,7 @@ function App() {
               element={<Contact />}
             />
             <Route
-              path="/2d-motion-graphic"
+              path="/:page"
               exact
               element={<ServiceDetail />}
             />

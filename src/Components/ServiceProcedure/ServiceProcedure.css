@@ -11,6 +11,7 @@
   font-weight: 400;
   padding: 50px 0 50px 50px;
   line-height: 1.2;
+  max-width: 770px;
 }
 .service-procedure-list {
   display: grid;
@@ -25,14 +26,14 @@
   background-color: #0c0c0c;
   min-height: 380px;
 }
-.service-procedure-tittle {
+.service-procedure-title {
   color: #ffffff;
   font-size: 32px;
   font-weight: 400;
   margin: 20px 0;
   line-height: 1.2;
 }
-.service-procedure-dessc {
+.service-procedure-desc {
   color: #ffffff;
   font-size: 20px;
   font-weight: 300;
@@ -51,4 +52,52 @@
   font-weight: 400;
   padding: 0 0 0 50px;
   line-height: 1.2;
+  max-width: 700px;
+}
+@media screen and (max-width: 1279px) {
+  .service-procedure-heading {
+    font-size: 56px;
+    padding: 40px 0 40px 10px;
+  }
+  .service-procedure-list {
+    grid-template-columns: repeat(2, 3fr);
+    grid-column-gap: 30px;
+    padding: 0 20px;
+  }
+  .service-procedure-work {
+    font-size: 56px;
+    padding: 0 0 0 10px;
+  }
+  .service-procedure-text {
+    padding: 150px 0 0 10px;
+  }
+}
+@media screen and (max-width: 1023px) {
+  .service-procedure-list {
+    padding: 0 0px;
+  }
+  .service-procedure-heading {
+    font-size: 42px;
+  }
+  .service-procedure-work {
+    font-size: 42px;
+  }
+}
+@media screen and (max-width: 768px) {
+  .service-procedure-list {
+    display: block;
+  }
+  .service-procedure-item {
+    margin-bottom: 30px;
+  }
+  .service-procedure-heading {
+    font-size: 36px;
+  }
+  .service-procedure-work {
+    font-size: 36px;
+  }
+  .service-procedure-text {
+    padding: 50px 0 0 10px;
+    font-size: 14px;
+  }
 }

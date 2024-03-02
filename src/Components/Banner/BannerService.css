@@ -55,3 +55,30 @@
   height: 1px;
   background-color: #000000;
 }
+@media screen and (max-width: 1279px) {
+  .service-banner-heading {
+    font-size: 86px;
+  }
+  .service-banner-bottom {
+    display: block;
+  }
+  .service-banner-company {
+    justify-content: space-between;
+  }
+  .service-banner-desc {
+    display: none;
+  }
+}
+@media screen and (max-width: 1023px) {
+  .service-banner-heading {
+    font-size: 72px;
+  }
+}
+@media screen and (max-width: 768px) {
+  .service-banner-heading {
+    font-size: 48px;
+  }
+  .service-banner-name {
+    font-size: 16px;
+  }
+}

@@ -1,12 +1,12 @@
 import React from 'react';
 import './BannerService.css';
 
-const BannerService = () => {
+const BannerService = ({ heading = '', content = '' }) => {
   return (
     <section className="service-banner">
       <div className="container">
         <div className="service-banner-top">
-          <h1 className="service-banner-heading">2D Motion Graphic</h1>
+          <h1 className="service-banner-heading">{heading}</h1>
         </div>
         <div className="service-banner-bottom">
           <div className="service-banner-company">
@@ -19,11 +19,7 @@ const BannerService = () => {
               <p className="service-banner-job">AGENCY</p>
             </div>
           </div>
-          <p className="service-banner-desc">
-            AGENCY Whether we're making the new or transforming the old, we sink
-            our teeth in every project and don't let go until we come up with
-            the best <br /> solutions.
-          </p>
+          <p className="service-banner-desc">{content}</p>
         </div>
       </div>
     </section>

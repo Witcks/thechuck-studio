@@ -7,9 +7,14 @@ const Team = () => {
   const [isDarkMode, setIsDarkMode] = useState(false);
 
   const handleScroll = useCallback(() => {
-    const position = window.pageYOffset;
-    console.log(position);
-    setIsDarkMode(position >= 6500);
+    const position = window.scrollY;
+    if (window.innerWidth >= 1280) {
+      setIsDarkMode(position >= 6500);
+    } else if (window.innerWidth >= 1024) {
+      setIsDarkMode(position >= 5350);
+    } else {
+      setIsDarkMode(position >= 2260);
+    }
   }, []);
 
   useEffect(() => {

@@ -6,7 +6,7 @@ const PeopleWork = ({ determineDarkMode }) => {
 
   useEffect(() => {
     const updateDarkMode = () => {
-      const position = window.pageYOffset;
+      const position = window.scrollY;
       const shouldActivateDarkMode = determineDarkMode(position);
       setIsDarkMode(shouldActivateDarkMode);
     };

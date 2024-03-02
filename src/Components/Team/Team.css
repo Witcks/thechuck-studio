@@ -15,11 +15,12 @@
   text-align: center;
 }
 .team-img {
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  display: grid;
+  place-items: center;
+  grid-template-columns: repeat(4, 1fr);
+  grid-column-gap: 50px;
+  grid-row-gap: 100px;
   padding: 80px 0;
-  gap: 100px;
 }
 .team-img-item {
   max-width: 150px;
@@ -73,4 +74,92 @@
 .team-uset-position {
   text-transform: uppercase;
   padding-left: 100px;
+}
+@media screen and (max-width: 1279px) {
+  .team-intro {
+    padding: 30px 0 30px 50px;
+  }
+  .team-user-info {
+    padding: 100px 0 0 100px;
+  }
+  .team-user-info:nth-child(2n) {
+    padding: 200px 0 0 350px;
+  }
+  .team-user-img {
+    width: 400px;
+    height: 500px;
+  }
+  .team-user-name {
+    font-size: 48px;
+  }
+  .team-uset-position {
+    padding-left: 40px;
+  }
+}
+@media screen and (max-width: 1023px) {
+  .team-title {
+    font-size: 42px;
+    max-width: 340px;
+  }
+  .team-intro {
+    padding: 30px 0 30px 10px;
+  }
+  .team-meet {
+    font-size: 14px;
+  }
+  .team-user-info {
+    padding: 60px 0 0 20px;
+  }
+  .team-user-info:nth-child(2n) {
+    padding: 60px 0 0 300px;
+  }
+  .team-user-img {
+    width: 350px;
+    height: 450px;
+  }
+  .team-user-name {
+    font-size: 36px;
+  }
+  .team-uset-position {
+    margin-top: 5px;
+    padding-left: 20px;
+  }
+  .team-img {
+    grid-template-columns: repeat(2, 2fr);
+    grid-column-gap: 50px;
+    grid-row-gap: 50px;
+    padding: 80px 0;
+  }
+  .team-user-person.right {
+    left: 20%;
+  }
+}
+@media screen and (max-width: 767px) {
+  .team-intro {
+    display: block;
+    text-align: center;
+  }
+  .team-title {
+    font-size: 36px;
+    max-width: 100%;
+    margin-bottom: 20px;
+  }
+  .team-user {
+    padding: 40px 0;
+  }
+  .team-user-img {
+    width: 200px;
+    height: 300px;
+  }
+  .team-user-name {
+    font-size: 28px;
+  }
+  .team-uset-position {
+    margin-top: 5px;
+    padding-left: 10px;
+    font-size: 14px;
+  }
+  .team-user-info:nth-child(2n) {
+    padding: 60px 0 0 220px;
+  }
 }

@@ -99,3 +99,59 @@
   height: 1px;
   background-color: #ffffff;
 }
+@media screen and (max-width: 1279px) {
+  .agency-banner-button {
+    padding: 80px;
+  }
+  .agency-banner-heading {
+    font-size: 74px;
+  }
+  .agency-banner-bottom {
+    display: block;
+  }
+  .agency-banner-company {
+    justify-content: space-between;
+  }
+  .agency-banner-desc {
+    display: none;
+  }
+}
+@media screen and (max-width: 1023px) {
+  .agency-banner-button {
+    padding: 63px;
+  }
+  .agency-banner-heading {
+    font-size: 52px;
+  }
+  .agency-banner-bottom {
+    display: block;
+  }
+  .agency-banner-company {
+    justify-content: space-between;
+  }
+  .agency-banner-desc {
+    display: none;
+  }
+}
+@media screen and (max-width: 767px) {
+  .agency-banner-top {
+    display: block;
+    padding-bottom: 40px;
+  }
+  .agency-banner-button {
+    padding: 63px;
+  }
+  .agency-banner-heading {
+    font-size: 48px;
+    padding-bottom: 20px;
+  }
+  .agency-banner-bottom {
+    display: block;
+  }
+  .agency-banner-company {
+    justify-content: space-between;
+  }
+  .agency-banner-desc {
+    display: none;
+  }
+}

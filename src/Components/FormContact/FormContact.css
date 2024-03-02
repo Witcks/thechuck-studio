@@ -184,3 +184,31 @@
   right: 0px;
   opacity: 0;
 }
+@media screen and (max-width: 1279px) {
+  .form-contact-list {
+    gap: 100px;
+  }
+}
+@media screen and (max-width: 1023px) {
+  .form-contact-list {
+    display: block;
+  }
+  .form-contact-link {
+    display: none;
+  }
+}
+@media screen and (max-width: 767px) {
+  .form-client {
+    display: block;
+  }
+  .form-name {
+    width: 100%;
+    margin-bottom: 20px;
+  }
+  .form-service-list {
+    display: grid;
+    grid-template-columns: repeat(2, 2fr);
+    grid-column-gap: 50px;
+    grid-row-gap: 50px;
+  }
+}

@@ -10,9 +10,25 @@ const Work = () => {
   return (
     <section className="work">
       <Header
-        determineDarkMode={(position) =>
-          position >= 0 && position <= 3100
-        }></Header>
+        determineDarkMode={(position) => {
+          if (window.innerWidth >= 1280) {
+            if (position >= 0 && position <= 3100) {
+              return true;
+            }
+          } else if (window.innerWidth >= 1024) {
+            if (position >= 0 && position <= 2550) {
+              return true;
+            }
+          } else if (window.innerWidth >= 768) {
+            if (position >= 0 && position <= 1900) {
+              return true;
+            }
+          } else {
+            if (position >= 0 && position <= 2800) {
+              return true;
+            }
+          }
+        }}></Header>
       <BannerWork></BannerWork>
       <PeopleWork determineDarkMode={(position) => position >= 0}></PeopleWork>
       <Company></Company>

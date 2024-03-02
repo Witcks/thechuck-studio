@@ -100,3 +100,49 @@
   height: 1px;
   background-color: #ffffff;
 }
+@media screen and (max-width: 1279px) {
+  .work-banner {
+    padding: 200px 0 100px 0;
+  }
+  .work-banner-bottom {
+    display: block;
+  }
+  .work-banner-desc {
+    display: none;
+  }
+  .work-banner-company {
+    justify-content: space-between;
+  }
+  .work-banner-button {
+    padding: 80px;
+    margin-right: 40px;
+  }
+  .work-banner-heading {
+    font-size: 86px;
+  }
+}
+@media screen and (max-width: 1023px) {
+  .work-banner-heading {
+    font-size: 56px;
+  }
+  .work-banner-button {
+    padding: 70px;
+    margin-right: 40px;
+  }
+}
+@media screen and (max-width: 767px) {
+  .work-banner-top {
+    display: block;
+    padding-bottom: 60px;
+  }
+  .work-banner-button {
+    padding: 65px;
+    margin-top: 30px;
+  }
+  .work-banner-name {
+    font-size: 16px;
+  }
+  .work-banner-job {
+    font-size: 14px;
+  }
+}

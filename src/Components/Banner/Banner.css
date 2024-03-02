@@ -29,7 +29,7 @@
 .banner-button {
   position: absolute;
   bottom: 40px;
-  left: 100%;
+  left: 95%;
   bottom: 10%;
   padding: 100px;
   border-radius: 50%;
@@ -57,14 +57,6 @@
 .banner-button:hover {
   background-color: #ffffff;
 }
-.banner-3d {
-  position: absolute;
-  top: 30%;
-  left: 70%;
-  transform: translate(-25%, -25%);
-  height: 600px;
-  width: 500px;
-}
 .banner-button:hover .cricle {
   filter: invert(100%);
 }
@@ -87,6 +79,13 @@
   padding-top: 30px;
   border-top: 1px solid #777777;
   padding-bottom: 50px;
+}
+.banner-3d {
+  position: absolute;
+  height: 170%;
+  width: 600px;
+  top: -40%;
+  right: 0;
 }
 .banner-company {
   display: flex;
@@ -117,4 +116,101 @@
   top: -31px;
   height: 1px;
   background-color: #ffffff;
+}
+@media screen and (max-width: 1439px) {
+  .banner-button {
+    padding: 80px;
+    left: 75%;
+  }
+  .banner-3d {
+    right: -40px;
+  }
+}
+@media screen and (max-width: 1279px) {
+  .banner-button {
+    padding: 80px;
+    left: 65%;
+  }
+  .banner-3d {
+    width: 400px;
+    height: 150%;
+    top: -23%;
+  }
+  .banner-desc {
+    max-width: 470px;
+  }
+}
+@media screen and (max-width: 1023px) {
+  .banner-button {
+    padding: 70px;
+    left: 85%;
+  }
+  .banner-tittle {
+    font-size: 64px;
+  }
+  .banner-job {
+    font-size: 42px;
+  }
+  .banner-bottom {
+    display: block;
+  }
+  .banner-company {
+    justify-content: space-between;
+  }
+  .banner-desc {
+    display: none;
+    text-align: center;
+    padding-top: 30px;
+    font-size: 16px;
+  }
+  .banner-desc::before {
+    width: 0;
+    top: 0;
+    height: 0;
+  }
+  .banner-list {
+    padding-bottom: 280px;
+  }
+  .banner-3d {
+    width: 280px;
+    height: 80%;
+    top: 35%;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+}
+@media screen and (max-width: 767px) {
+  .banner-button {
+    padding: 70px;
+    left: 50%;
+  }
+  .banner-list {
+    display: block;
+  }
+  .banner-tittle {
+    font-size: 42px;
+  }
+  .banner-job {
+    font-size: 24px;
+  }
+  .banner-bottom {
+    display: block;
+  }
+  .banner-info {
+    font-size: 16px;
+  }
+  .banner-company {
+    justify-content: space-between;
+  }
+  .banner-desc {
+    display: none;
+    text-align: center;
+    padding-top: 30px;
+    font-size: 16px;
+  }
+  .banner-desc::before {
+    width: 0;
+    top: 0;
+    height: 0;
+  }
 }

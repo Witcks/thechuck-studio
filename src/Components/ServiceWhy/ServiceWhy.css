@@ -7,6 +7,7 @@
   font-weight: 400;
   line-height: 1.2;
   padding: 0 0 24px 80px;
+  max-width: 600px;
 }
 .service-why-text {
   max-width: 680px;
@@ -55,7 +56,7 @@
 }
 .service-why-info {
   font-weight: 300;
-  width: 500px;
+  max-width: 500px;
   margin-bottom: 30px;
   line-height: 1.5;
 }
@@ -124,4 +125,49 @@
 
 .service-why-button:hover::before {
   transform: scaleX(1) skewX(35deg);
+}
+@media screen and (max-width: 1279px) {
+  .service-why {
+    padding: 50px 0;
+  }
+  .service-why-heading {
+    padding: 0 0 24px 10px;
+  }
+  .service-why-text {
+    padding: 0 0 24px 10px;
+  }
+  .service-why-list {
+    width: 100%;
+    padding: 0 10px;
+  }
+  .service-why-criteria {
+    padding: 50px 0 50px 0;
+  }
+  .service-why-next {
+    font-size: 42px;
+    margin-bottom: 10px;
+  }
+  .service-why-info {
+    margin-bottom: 20px;
+  }
+}
+@media screen and (max-width: 1023px) {
+  .service-why-heading {
+    font-size: 42px;
+    padding: 0 0 14px 10px;
+  }
+  .service-why-list {
+    grid-template-columns: repeat(2, 3fr);
+  }
+}
+@media screen and (max-width: 768px) {
+  .service-why-list {
+    display: block;
+  }
+  .service-why-item {
+    margin-bottom: 30px;
+  }
+  .service-why-next {
+    font-size: 36px;
+  }
 }

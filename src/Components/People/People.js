@@ -7,15 +7,22 @@ import './People.css';
 gsap.registerPlugin(ScrollTrigger);
 
 const People = ({
-  headingText = 'People we help', // Giá trị mặc định cho tiêu đề
-  revealTexts = [], // Mảng các chuỗi cho phần reveal
-  peopleTexts = [], // Mảng các chuỗi cho phần mô tả
+  heading = '', // Giá trị mặc định cho tiêu đề
+  title = [], // Mảng các chuỗi cho phần reveal
+  contentA = '', // Mảng các chuỗi cho phần mô tả
+  contentB = '', // Mảng các chuỗi cho phần mô tả
 }) => {
   const [isDarkMode, setIsDarkMode] = useState(false);
 
   const handleScroll = useCallback(() => {
-    const position = window.pageYOffset;
-    setIsDarkMode(position >= 2450);
+    const position = window.scrollY;
+    if (window.innerWidth >= 1280) {
+      setIsDarkMode(position >= 2450);
+    } else if (window.innerWidth >= 1024) {
+      setIsDarkMode(position >= 2640);
+    } else {
+      setIsDarkMode(position >= 2260);
+    }
   }, []);
 
   useEffect(() => {
@@ -52,28 +59,29 @@ const People = ({
     <section className={`people ${isDarkMode ? 'dark-mode' : ''}`}>
       <div className="container">
         <div className="people-content">
-          <h3 className="people-heading">{headingText}</h3>
+          <h3 className="people-heading">{heading}</h3>
           <div className="people-desc">
-            {revealTexts.map((text, index) => (
-              <div
-                key={index}
-                className="people-mark">
-                <p
-                  className="reveal-type"
-                  data-bg-color="#cccccc"
-                  data-fg-color="#000000">
-                  {text}
-                </p>
-              </div>
-            ))}
-            <div className="people-list">
-              {peopleTexts.map((text, index) => (
-                <p
+            <div className="people-mark">
+              {title.map((text, index) => (
+                <div
                   key={index}
-                  className={`people-text ${isDarkMode ? 'dark-mode' : ''}`}>
-                  {text}
-                </p>
+                  className="people-mark">
+                  <p
+                    className="reveal-type"
+                    data-bg-color="#cccccc"
+                    data-fg-color="#000000">
+                    {text}
+                  </p>
+                </div>
               ))}
+            </div>
+            <div className="people-list">
+              <p className={`people-text ${isDarkMode ? 'dark-mode' : ''}`}>
+                {contentA}
+              </p>
+              <p className={`people-text ${isDarkMode ? 'dark-mode' : ''}`}>
+                {contentB}
+              </p>
             </div>
             <a
               href="/work"

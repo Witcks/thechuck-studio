@@ -94,3 +94,49 @@
   opacity: 1;
   left: 45%;
 }
+@media screen and (max-width: 1279px) {
+  .people-work-item img {
+    width: 435px;
+    height: 580px;
+  }
+  .people-bottom {
+    padding: 100px;
+    font-size: 14px;
+  }
+  .people-bottom i {
+    right: 12%;
+  }
+}
+@media screen and (max-width: 1023px) {
+  .people-work-item img {
+    width: 320px;
+    height: 320px;
+  }
+  .people-work-tittle {
+    font-size: 24px;
+  }
+  .people-bottom {
+    padding: 80px;
+    font-size: 11px;
+  }
+  .people-work-job {
+    font-size: 16px;
+  }
+  .people-bottom i {
+    right: 12%;
+  }
+}
+@media screen and (max-width: 767px) {
+  .people-work-list {
+    display: block;
+    align-items: center;
+    text-align: center;
+    padding-bottom: 30px;
+  }
+  .people-work-item {
+    margin-bottom: 40px;
+  }
+  .people-work-item img {
+    display: inline-block;
+  }
+}

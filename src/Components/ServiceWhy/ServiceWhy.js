@@ -1,79 +1,23 @@
 import React from 'react';
 import './ServiceWhy.css';
 
-const ServiceWhy = () => {
+const ServiceWhy = ({ heanding = '', text = '', items = [] }) => {
   return (
     <section className="service-why">
       <div className="container">
-        <h3 className="service-why-heading">
-          Why you need a <br /> 2D Motion Graphic
-        </h3>
-        <p className="service-why-text">
-          Lorem ipsum dolor sit amet consectetur, adipisicing elit. Sint
-          corrupti repellendus architecto fugit nobis excepturi
-        </p>
+        <h3 className="service-why-heading">{heanding}</h3>
+        <p className="service-why-text">{text}</p>
         <div className="service-why-criteria">
           <div className="service-why-list">
-            <div className="service-why-item">
-              <h4 className="service-why-number">01</h4>
-              <p className="service-why-tittle">Heading 1</p>
-              <p className="service-why-desc">
-                Lorem ipsum dolor sit amet consectetur, adipisicing elit. Sint
-                corrupti repellendus architecto fugit nobis excepturi laudantium
-                fuga sit, eligendi nesciunt nisi fugiat soluta inventore
-                voluptatibus possimus?
-              </p>
-            </div>
-            <div className="service-why-item">
-              <h4 className="service-why-number">01</h4>
-              <p className="service-why-tittle">Heading 1</p>
-              <p className="service-why-desc">
-                Lorem ipsum dolor sit amet consectetur, adipisicing elit. Sint
-                corrupti repellendus architecto fugit nobis excepturi laudantium
-                fuga sit, eligendi nesciunt nisi fugiat soluta inventore
-                voluptatibus possimus?
-              </p>
-            </div>
-            <div className="service-why-item">
-              <h4 className="service-why-number">01</h4>
-              <p className="service-why-tittle">Heading 1</p>
-              <p className="service-why-desc">
-                Lorem ipsum dolor sit amet consectetur, adipisicing elit. Sint
-                corrupti repellendus architecto fugit nobis excepturi laudantium
-                fuga sit, eligendi nesciunt nisi fugiat soluta inventore
-                voluptatibus possimus?
-              </p>
-            </div>
-            <div className="service-why-item">
-              <h4 className="service-why-number">01</h4>
-              <p className="service-why-tittle">Heading 1</p>
-              <p className="service-why-desc">
-                Lorem ipsum dolor sit amet consectetur, adipisicing elit. Sint
-                corrupti repellendus architecto fugit nobis excepturi laudantium
-                fuga sit, eligendi nesciunt nisi fugiat soluta inventore
-                voluptatibus possimus?
-              </p>
-            </div>
-            <div className="service-why-item">
-              <h4 className="service-why-number">01</h4>
-              <p className="service-why-tittle">Heading 1</p>
-              <p className="service-why-desc">
-                Lorem ipsum dolor sit amet consectetur, adipisicing elit. Sint
-                corrupti repellendus architecto fugit nobis excepturi laudantium
-                fuga sit, eligendi nesciunt nisi fugiat soluta inventore
-                voluptatibus possimus?
-              </p>
-            </div>
-            <div className="service-why-item">
-              <h4 className="service-why-number">01</h4>
-              <p className="service-why-tittle">Heading 1</p>
-              <p className="service-why-desc">
-                Lorem ipsum dolor sit amet consectetur, adipisicing elit. Sint
-                corrupti repellendus architecto fugit nobis excepturi laudantium
-                fuga sit, eligendi nesciunt nisi fugiat soluta inventore
-                voluptatibus possimus?
-              </p>
-            </div>
+            {items.map((item, index) => (
+              <div
+                className="service-why-item"
+                key={index}>
+                <h4 className="service-why-number">{item.number}</h4>
+                <p className="service-why-tittle">{item.title}</p>
+                <p className="service-why-desc">{item.desc}</p>
+              </div>
+            ))}
           </div>
         </div>
         <div className="service-why-bottom">

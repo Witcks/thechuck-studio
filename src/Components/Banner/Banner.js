@@ -2,6 +2,7 @@ import React from 'react';
 import './Banner.css';
 import cricleText from './text-cricle-white.png';
 import icon from './icon-white.png';
+import ThreeD from '../ThreeD/ThreeD';
 
 const Banner = () => {
   return (
@@ -13,9 +14,9 @@ const Banner = () => {
               <h1 className="banner-tittle">
                 We are <br /> the story
               </h1>
-              <p className="banner-job">Graphic Design</p>
-              <p className="banner-job">Production</p>
-              <p className="banner-job">Website</p>
+              <p className="banner-job">2D Motion Graphic</p>
+              <p className="banner-job">Video Production</p>
+              <p className="banner-job">Brand Identity</p>
               <button className="banner-button">
                 <img
                   src={cricleText}
@@ -30,7 +31,9 @@ const Banner = () => {
               </button>
             </div>
           </div>
-          <div className="banner-3d"></div>
+          <div className="banner-3d">
+            <ThreeD></ThreeD>
+          </div>
         </div>
         <div className="banner-bottom">
           <div className="banner-company">
@@ -45,8 +48,7 @@ const Banner = () => {
           </div>
           <p className="banner-desc">
             The creative team specializes in elevating technology startups, 2D
-            Motion Graphics, Video Production, Brand Identity Design,
-            <br /> Web Design.
+            Motion Graphics, Video Production, Brand Identity Design Web Design.
           </p>
         </div>
       </div>

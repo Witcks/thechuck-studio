@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from 'react';
+import { Link } from 'react-router-dom';
 import './Header.css';
 import logo from './logo.png';
 
@@ -12,7 +13,7 @@ const Header = ({
 
   useEffect(() => {
     const updateDarkMode = () => {
-      const position = window.pageYOffset;
+      const position = window.scrollY;
       setIsDarkMode(determineDarkMode(position));
       setIsGreenMode(determineGreenMode(position));
     };
@@ -30,24 +31,24 @@ const Header = ({
       <header className="header is-fixed">
         <div className="container-fixed">
           <nav className="header-nav">
-            <a
-              href="/"
+            <Link
+              to="/"
               className="header-logo">
               <img
                 src={logo}
                 alt=""
                 className={`header-logo-img ${isDarkMode ? 'dark-mode' : ''}`}
               />
-            </a>
+            </Link>
             <div className="hearder-list">
-              <a
-                href="/contact"
+              <Link
+                to="/contact"
                 className={`header-contact ${isOpen ? 'is-show' : ''} ${
                   isDarkMode ? 'dark-mode' : ''
                 } ${isGreenMode ? 'green' : ''}`}>
                 <span>Start a project</span>
                 <i className="fas fa-arrow-right"></i>
-              </a>
+              </Link>
               <button
                 className="header-wrap"
                 onClick={toggleMenu}>
@@ -63,102 +64,95 @@ const Header = ({
         <div className="menu-list">
           <ul className="menu-left">
             <li className="menu-left-item">
-              <a
-                href="/work"
+              <Link
+                to="/work"
                 className="menu-left-link">
                 Work
-              </a>
+              </Link>
             </li>
             <li className="menu-left-item">
               <span className="menu-left-link">Services</span>
               <ul className="menu-left-dropdown">
                 <li className="menu-left-service">
-                  <a
-                    href="/2d-motion-graphic"
+                  <Link
+                    to="/2d-motion-graphic"
                     className="menu-service-link">
                     2D Motion Graphic
-                  </a>
+                  </Link>
                 </li>
                 <li className="menu-left-service">
-                  <a
-                    href="/video-production"
+                  <Link
+                    to="/video-production"
                     className="menu-service-link">
                     Video Production
-                  </a>
+                  </Link>
                 </li>
                 <li className="menu-left-service">
-                  <a
-                    href="/brand-identity"
+                  <Link
+                    to="/brand-identity"
                     className="menu-service-link">
                     Brand Identity
-                  </a>
+                  </Link>
                 </li>
                 <li className="menu-left-service">
-                  <a
-                    href="/web-design"
+                  <Link
+                    to="/web-design"
                     className="menu-service-link">
                     Web Design
-                  </a>
-                </li>
-                <li className="menu-left-service">
-                  <a
-                    href="/ui-ux-design"
-                    className="menu-service-link">
-                    UI/UX Design
-                  </a>
+                  </Link>
                 </li>
               </ul>
             </li>
             <li className="menu-left-item">
-              <a
-                href="/about"
+              <Link
+                to="/about"
                 className="menu-left-link">
                 Agency
-              </a>
+              </Link>
             </li>
             <li className="menu-left-item">
-              <a
-                href="/blog"
+              <Link
+                to="/blog"
                 className="menu-left-link">
                 Blog
-              </a>
+              </Link>
             </li>
           </ul>
           <ul className="menu-right">
             <li className="menu-right-item">
-              <a
-                href="?"
+              <Link
+                to="?"
                 className="menu-right-link">
                 Instagram
-              </a>
+              </Link>
             </li>
             <li className="menu-right-item">
-              <a
-                href="?"
+              <Link
+                to="?"
                 className="menu-right-link">
                 Linkedin
-              </a>
+              </Link>
             </li>
             <li className="menu-right-item">
-              <a
-                href="?"
+              <Link
+                to="?"
                 className="menu-right-link">
                 Behance
-              </a>
+              </Link>
             </li>
             <li className="menu-right-item">
-              <a
-                href="?"
+              <Link
+                to="?"
                 className="menu-right-link">
                 Dribbble
-              </a>
+              </Link>
             </li>
             <li className="menu-right-item">
-              <a
-                href="?"
+              <Link
+                to="?"
                 className="menu-right-link">
                 Facebook
-              </a>
+              </Link>
             </li>
           </ul>
         </div>

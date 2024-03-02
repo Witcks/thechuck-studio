@@ -1,5 +1,4 @@
 import React from 'react';
-import './Home.css';
 import Banner from '../Banner/Banner';
 import Clip from '../Clip/Clip';
 import People from '../People/People';
@@ -23,7 +22,29 @@ const Home = () => {
   return (
     <section className="home">
       <Header
-        determineDarkMode={(position) => position >= 2450 && position <= 5200}
+        determineDarkMode={(position) => {
+          if (window.innerWidth >= 1440) {
+            if (position >= 2450 && position <= 5200) {
+              return true;
+            }
+          } else if (window.innerWidth >= 1280) {
+            if (position >= 2450 && position <= 5400) {
+              return true;
+            }
+          } else if (window.innerWidth >= 1024) {
+            if (position >= 2450 && position <= 4720) {
+              return true;
+            }
+          } else if (window.innerWidth >= 768) {
+            if (position >= 2640 && position <= 4430) {
+              return true;
+            }
+          } else {
+            if (position >= 2260 && position <= 4970) {
+              return true;
+            }
+          }
+        }}
         determineGreenMode={(position) =>
           position >= 0 && position <= 500
         }></Header>
@@ -34,7 +55,21 @@ const Home = () => {
         revealTexts={revealTexts}
         peopleTexts={peopleTexts}></People>
       <PeopleWork
-        determineDarkMode={(position) => position >= 2450}></PeopleWork>
+        determineDarkMode={(position) => {
+          if (window.innerWidth >= 1280) {
+            if (position >= 2450) {
+              return true;
+            }
+          } else if (window.innerWidth >= 1024) {
+            if (position >= 2640) {
+              return true;
+            }
+          } else {
+            if (position >= 2260) {
+              return true;
+            }
+          }
+        }}></PeopleWork>
       <Services></Services>
       <About></About>
       <Feedback></Feedback>

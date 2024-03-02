@@ -14,7 +14,7 @@ const Loading = () => {
     // Trigger loading on location change
     handleStart();
     // Simulate loading for demonstration
-    setTimeout(handleComplete, 3000); // remove setTimeout in a real app unless you're simulating delay
+    setTimeout(handleComplete, 1500); // remove setTimeout in a real app unless you're simulating delay
 
     // Cleanup if the component unmounts
     return () => {

@@ -5,25 +5,24 @@ const Stroty = () => {
   const headerRightRef = useRef(null);
   const storySectionRef = useRef(null);
   useEffect(() => {
-    const handleScroll = () => {
-      const headerRight = headerRightRef.current;
-      const storySection = storySectionRef.current;
+    if (window.innerWidth >= 1024) {
+      const handleScroll = () => {
+        const headerRight = headerRightRef.current;
+        const storySection = storySectionRef.current;
+        if (headerRight && storySection) {
+          let { top } = storySection.getBoundingClientRect();
+          top = top > 0 ? 0 : top;
+          headerRight.style.transform = `translateX(${top}px)`;
+        }
+      };
+      const throttledScroll = throttle(handleScroll, 10);
 
-      if (headerRight && storySection) {
-        let { top } = storySection.getBoundingClientRect();
+      window.addEventListener('scroll', throttledScroll);
 
-        top = top > 0 ? 0 : top;
-        headerRight.style.transform = `translateX(${top}px)`;
-      }
-    };
-
-    const throttledScroll = throttle(handleScroll, 10);
-
-    window.addEventListener('scroll', throttledScroll);
-
-    return () => {
-      window.removeEventListener('scroll', throttledScroll);
-    };
+      return () => {
+        window.removeEventListener('scroll', throttledScroll);
+      };
+    }
   }, []);
 
   // Throttle function to limit the rate at which a function can fire.
