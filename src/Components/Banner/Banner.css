@@ -162,16 +162,23 @@
 }
 @media screen and (max-width: 1279px) {
   .banner-button {
-    padding: 80px;
-    left: 65%;
+    padding: 60px;
+    left: 70%;
   }
   .banner-3d {
     width: 400px;
-    height: 150%;
-    top: -23%;
+    height: 120%;
+    top: 25%;
   }
   .banner-desc {
     max-width: 470px;
+    font-size: 16px;
+  }
+  .banner-tittle {
+    font-size: 56px;
+  }
+  .banner-job {
+    font-size: 32px;
   }
 }
 @media screen and (max-width: 1023px) {
@@ -206,26 +213,26 @@
     padding-bottom: 280px;
   }
   .banner-3d {
-    width: 280px;
+    width: 400px;
     height: 80%;
-    top: 35%;
-    left: 50%;
+    top: 65%;
+    left: 25%;
     transform: translateX(-50%);
   }
 }
 @media screen and (max-width: 767px) {
   .banner-button {
-    padding: 70px;
-    left: 50%;
+    padding: 60px;
+    left: 55%;
   }
   .banner-list {
     display: block;
   }
   .banner-tittle {
-    font-size: 42px;
+    font-size: 36px;
   }
   .banner-job {
-    font-size: 24px;
+    font-size: 16px;
   }
   .banner-bottom {
     display: block;
@@ -246,5 +253,12 @@
     width: 0;
     top: 0;
     height: 0;
+  }
+  .banner-3d {
+    width: 260px;
+    height: 60%;
+    top: 65%;
+    left: 10%;
+    transform: translateX(-50%);
   }
 }
