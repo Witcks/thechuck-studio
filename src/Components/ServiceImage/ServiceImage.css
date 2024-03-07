@@ -16,6 +16,12 @@
   max-width: 350px;
   object-fit: cover;
 }
+@media screen and (min-width: 2000px) {
+  .service-image-item {
+    height: 750px;
+    max-width: 420px;
+  }
+}
 @media screen and (max-width: 1439px) {
   .service-image-list {
     grid-template-columns: repeat(2, 2fr);

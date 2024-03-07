@@ -93,6 +93,18 @@
   display: flex;
   will-change: transform;
 }
+@media screen and (min-width: 2000px) {
+  .feedback-heading {
+    font-size: 24px;
+  }
+  .feedback-content {
+    font-size: 72px;
+    height: 450px;
+  }
+  .feedback-user-name {
+    font-size: 24px;
+  }
+}
 @media screen and (max-width: 1279px) {
   .feedback-layout {
     gap: 60px;
@@ -146,17 +158,18 @@
 }
 @media screen and (max-width: 767px) {
   .feedback-content {
-    font-size: 28px;
-    height: 230px;
+    font-size: 24px;
+    height: 250px;
   }
   .feedback-bottom {
     padding-top: 30px;
   }
   .feedback-nextprev {
-    gap: 20px;
+    gap: 10px;
+    right: 0;
   }
   .feedback-nextprev i {
-    font-size: 24px;
+    font-size: 18px;
     padding: 16px;
   }
   .feedback-user-avatar {
@@ -168,8 +181,11 @@
   .feedback-user-name {
     font-size: 14px;
   }
+  .feedback-user {
+    gap: 14px;
+  }
   .feedback-job {
-    margin-right: 130px;
+    margin-right: 90px;
     font-size: 12px;
   }
 }

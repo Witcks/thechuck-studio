@@ -13,8 +13,8 @@ import Loading from './Components/Loading/Loading';
 function App() {
   return (
     <BrowserRouter basename="/">
+      <Loading />
       <div className="wapper">
-        <Loading />
         <main className="main">
           <Routes>
             <Route

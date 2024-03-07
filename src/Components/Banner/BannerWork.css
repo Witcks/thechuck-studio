@@ -100,6 +100,24 @@
   height: 1px;
   background-color: #ffffff;
 }
+@media screen and (min-width: 2000px) {
+  .work-banner-heading {
+    font-size: 120px;
+  }
+  .work-banner-button {
+    padding: 120px;
+  }
+  .work-banner-name {
+    font-size: 24px;
+  }
+  .work-banner-job {
+    font-size: 24px;
+  }
+  .work-banner-desc {
+    font-size: 24px;
+    max-width: 900px;
+  }
+}
 @media screen and (max-width: 1279px) {
   .work-banner {
     padding: 200px 0 100px 0;
@@ -140,9 +158,12 @@
     margin-top: 30px;
   }
   .work-banner-name {
-    font-size: 16px;
+    font-size: 12px;
   }
   .work-banner-job {
-    font-size: 14px;
+    font-size: 12px;
+  }
+  .work-banner-heading {
+    font-size: 42px;
   }
 }

@@ -55,6 +55,25 @@
   height: 1px;
   background-color: #000000;
 }
+@media screen and (min-width: 2000px) {
+  .blog-banner-heading {
+    font-size: 120px;
+  }
+  .blog-banner-text {
+    font-size: 24px;
+    max-width: 750px;
+  }
+  .blog-banner-name {
+    font-size: 24px;
+  }
+  .blog-banner-job {
+    font-size: 24px;
+  }
+  .blog-banner-desc {
+    font-size: 24px;
+    max-width: 900px;
+  }
+}
 @media screen and (max-width: 1279px) {
   .blog-banner-top {
     gap: 50px;

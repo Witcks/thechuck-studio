@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react';
+import React from 'react';
 import Header from '../Header/Header';
 import BannerService from '../Banner/BannerService';
 import People from '../People/People';
@@ -10,55 +10,19 @@ import Question from '../Question/Question';
 import ServiceWhy from '../ServiceWhy/ServiceWhy';
 import ServiceProcess from '../ServiceProcess/ServiceProcess';
 import { useParams } from 'react-router-dom';
+import content from '../../content';
 
 const titlePeople = [
   'Lorem ipsum dolor sit amet consectetur, adipisicing elit. Sint corrupti repellendus architecto fugit.',
 ];
 const ServiceDetail = () => {
   let { page } = useParams();
-  const [data, setData] = useState({
-    banner: [],
-    people: [],
-    producer: [],
-    why: [],
-    process: [],
-  });
 
-  useEffect(() => {
-    const fetchData = async () => {
-      try {
-        const bannerResponse = await fetch(
-          'http://localhost:3000/bannerService'
-        );
-        const bannerData = await bannerResponse.json();
-        const peopleResponse = await fetch('http://localhost:3000/people');
-        const peopleData = await peopleResponse.json();
-        const producerResponse = await fetch('http://localhost:3000/producer');
-        const producerData = await producerResponse.json();
-        const whyResponse = await fetch('http://localhost:3000/why');
-        const whyData = await whyResponse.json();
-        const processResponse = await fetch('http://localhost:3000/process');
-        const processData = await processResponse.json();
-        setData({
-          banner: bannerData,
-          people: peopleData,
-          producer: producerData,
-          why: whyData,
-          process: processData,
-        });
-      } catch (error) {
-        console.error('Error fetching data:', error);
-      }
-    };
-
-    fetchData();
-  }, []);
-
-  const banner = data.banner.find((item) => item.page === page) || {};
-  const people = data.people.find((item) => item.page === page) || {};
-  const producer = data.producer.find((item) => item.page === page) || {};
-  const why = data.why.find((item) => item.page === page) || {};
-  const process = data.process.find((item) => item.page === page) || {};
+  const banner = content.bannerService.find((item) => item.page === page) || {};
+  const people = content.people.find((item) => item.page === page) || {};
+  const producer = content.producer.find((item) => item.page === page) || {};
+  const why = content.why.find((item) => item.page === page) || {};
+  const process = content.process.find((item) => item.page === page) || {};
 
   return (
     <section className="service-detail">

@@ -3,6 +3,7 @@ import { gsap } from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
 import SplitType from 'split-type';
 import './People.css';
+import { Link } from 'react-router-dom';
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -83,12 +84,12 @@ const People = ({
                 {contentB}
               </p>
             </div>
-            <a
-              href="/work"
+            <Link
+              to="/work"
               className={`people-button ${isDarkMode ? 'dark-mode' : ''}`}>
               <span>Discover our work</span>
               <i className="fas fa-arrow-right"></i>
-            </a>
+            </Link>
           </div>
         </div>
       </div>

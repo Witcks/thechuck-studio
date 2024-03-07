@@ -184,6 +184,46 @@
   right: 0px;
   opacity: 0;
 }
+@media screen and (min-width: 2000px) {
+  .form-contact-tittle {
+    font-size: 46px;
+    max-width: 1200px;
+  }
+  .form-contact-info {
+    max-width: 1200px;
+  }
+  .form-contanct-service {
+    font-size: 32px;
+  }
+  .form-service-name {
+    font-size: 24px;
+  }
+  .checkmark {
+    height: 35px;
+    width: 35px;
+  }
+  .form-contact-client {
+    font-size: 36px;
+  }
+  .form-client-info span {
+    font-size: 32px;
+  }
+  .form-name {
+    width: 500px;
+    font-size: 32px;
+  }
+  .form-company {
+    font-size: 32px;
+  }
+  .form-client-button {
+    padding: 28px 110px;
+    font-size: 20px;
+    border-radius: 30px;
+  }
+  .form-client-button i {
+    font-size: 20px;
+  }
+}
 @media screen and (max-width: 1279px) {
   .form-contact-list {
     gap: 100px;

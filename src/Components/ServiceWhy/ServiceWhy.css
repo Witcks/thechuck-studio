@@ -126,6 +126,40 @@
 .service-why-button:hover::before {
   transform: scaleX(1) skewX(35deg);
 }
+
+@media screen and (min-width: 2000px) {
+  .service-why-heading {
+    font-size: 72px;
+    max-width: 720px;
+  }
+  .service-why-text {
+    font-size: 24px;
+  }
+  .service-why-number {
+    font-size: 56px;
+  }
+  .service-why-tittle {
+    font-size: 42px;
+  }
+  .service-why-desc {
+    font-size: 24px;
+  }
+  .service-why-next {
+    font-size: 64px;
+  }
+  .service-why-info {
+    font-size: 24px;
+    max-width: 750px;
+  }
+  .service-why-button {
+    padding: 28px 130px;
+    font-size: 20px;
+    border-radius: 30px;
+  }
+  .service-why-button i {
+    font-size: 20px;
+  }
+}
 @media screen and (max-width: 1279px) {
   .service-why {
     padding: 50px 0;

@@ -2,6 +2,7 @@ import React from 'react';
 import './BannerWork.css';
 import cricleText from './text-cricle-white.png';
 import icon from './icon-white.png';
+import { Link } from 'react-router-dom';
 
 const BannerWork = () => {
   return (
@@ -11,18 +12,20 @@ const BannerWork = () => {
           <h1 className="work-banner-heading">
             Projects we’ve brought to life
           </h1>
-          <button className="work-banner-button">
-            <img
-              src={cricleText}
-              alt=""
-              className="cricle"
-            />
-            <img
-              src={icon}
-              alt=""
-              className="icon"
-            />
-          </button>
+          <Link to="/contact">
+            <button className="work-banner-button">
+              <img
+                src={cricleText}
+                alt=""
+                className="cricle"
+              />
+              <img
+                src={icon}
+                alt=""
+                className="icon"
+              />
+            </button>
+          </Link>
         </div>
         <div className="work-banner-bottom">
           <div className="work-banner-company">

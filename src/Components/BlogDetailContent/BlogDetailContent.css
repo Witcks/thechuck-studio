@@ -54,6 +54,24 @@
   margin-bottom: 20px;
   font-weight: 300;
 }
+@media screen and (min-width: 2000px) {
+  .blog-detail-img {
+    height: 750px;
+  }
+  .blog-detail-title-item {
+    font-size: 32px;
+  }
+  .blog-detail-content-heading {
+    font-size: 72px;
+  }
+  .blog-detail-content-img {
+    width: 800px;
+    height: 500px;
+  }
+  .blog-detail-content-desc {
+    font-size: 26px;
+  }
+}
 @media screen and (max-width: 1279px) {
   .blog-detail-img {
     height: 450px;

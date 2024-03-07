@@ -55,6 +55,22 @@
   height: 1px;
   background-color: #000000;
 }
+@media screen and (min-width: 2000px) {
+  .service-banner-heading {
+    font-size: 120px;
+  }
+  .service-banner-name {
+    font-size: 24px;
+  }
+  .service-banner-job {
+    font-size: 24px;
+  }
+  .service-banner-desc {
+    font-size: 24px;
+    max-width: 900px;
+  }
+}
+
 @media screen and (max-width: 1279px) {
   .service-banner-heading {
     font-size: 86px;
@@ -79,6 +95,9 @@
     font-size: 48px;
   }
   .service-banner-name {
-    font-size: 16px;
+    font-size: 12px;
+  }
+  .service-banner-job {
+    font-size: 12px;
   }
 }

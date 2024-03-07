@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import './PeopleWork.css';
+import { Link } from 'react-router-dom';
 
 const PeopleWork = ({ determineDarkMode }) => {
   const [isDarkMode, setIsDarkMode] = useState(false);
@@ -84,13 +85,13 @@ const PeopleWork = ({ determineDarkMode }) => {
               </p>
             </div>
           </div>
-          <a
-            href="/work"
+          <Link
+            to="/work"
             className={`people-bottom ${isDarkMode ? 'dark-mode' : ''}`}>
             <span className="more">More project</span>
             <span className="just">Just click</span>
             <i className="fas fa-arrow-right"></i>
-          </a>
+          </Link>
         </div>
       </div>
     </section>

@@ -73,7 +73,7 @@
   font-size: 10px;
   position: absolute;
   right: 20px;
-  top: 54%;
+  top: 50%;
   transform: translateY(-50%);
   transition: all 0.1s linear;
 }
@@ -241,6 +241,42 @@
   font-size: 30px;
   position: relative;
   z-index: 9999;
+}
+@media screen and (min-width: 2000px) {
+  .container-fixed {
+    max-width: 1920px;
+    margin: 0 auto;
+  }
+  .header-logo-img {
+    height: 60px;
+  }
+  .header-contact {
+    padding: 28px 130px;
+    font-size: 20px;
+    border-radius: 30px;
+  }
+  .header-contact i {
+    font-size: 20px;
+  }
+  .header-wrap {
+    width: 56px;
+    height: 56px;
+    border-radius: 14px;
+    gap: 10px;
+  }
+  .menu-left-link {
+    font-size: 100px;
+  }
+  .menu-left-dropdown {
+    left: 110%;
+    width: 450px;
+  }
+  .menu-service-link {
+    font-size: 36px;
+  }
+  .menu-right-link {
+    font-size: 32px;
+  }
 }
 @media screen and (max-width: 1023px) {
   .menu-left-link {

@@ -82,10 +82,13 @@
 }
 .banner-3d {
   position: absolute;
-  height: 170%;
-  width: 600px;
-  top: -40%;
+  height: 100%;
+  width: 700px;
+  top: 40%;
+  transform: translateY(-50%);
   right: 0;
+  overflow: hidden;
+  z-index: 1;
 }
 .banner-company {
   display: flex;
@@ -116,6 +119,37 @@
   top: -31px;
   height: 1px;
   background-color: #ffffff;
+}
+@media screen and (min-width: 2000px) {
+  .banner {
+    padding-top: 250px;
+  }
+  .banner-tittle {
+    font-size: 112px;
+  }
+  .banner-3d {
+    height: 150%;
+    width: 500px;
+    top: 30%;
+  }
+  .banner-bottom {
+    margin-top: 120px;
+  }
+  .banner-button {
+    padding: 120px;
+    left: 75%;
+    bottom: 0;
+  }
+  .banner-name {
+    font-size: 24px;
+  }
+  .banner-address {
+    font-size: 24px;
+  }
+  .banner-desc {
+    font-size: 24px;
+    max-width: 850px;
+  }
 }
 @media screen and (max-width: 1439px) {
   .banner-button {

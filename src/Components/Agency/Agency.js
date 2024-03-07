@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react';
+import React from 'react';
 import Header from '../Header/Header';
 import BannerAgency from '../Banner/BannerAgency';
 import People from '../People/People';
@@ -6,29 +6,13 @@ import Gallery from '../Gallery/Gallery';
 import Stroty from '../Story/Stroty';
 import Team from '../Team/Team';
 import Feedback from '../Feedback/Feedback';
+import content from '../../content.js';
+
 const titlePeople = [
   'Lorem ipsum dolor sit amet consectetur, adipisicing elit. Sint corrupti repellendus architecto fugit.',
 ];
 const Agency = () => {
-  const [data, setData] = useState({
-    people: [],
-  });
-  useEffect(() => {
-    const fetchData = async () => {
-      try {
-        const peopleResponse = await fetch('http://localhost:3000/people');
-        const peopleData = await peopleResponse.json();
-        setData({
-          people: peopleData,
-        });
-      } catch (error) {
-        console.error('Error fetching data:', error);
-      }
-    };
-
-    fetchData();
-  }, []);
-  const people = data.people.find((item) => item.page === 'about') || {};
+  const people = content.people.find((item) => item.page === 'about') || {};
   return (
     <section className="agency">
       <Header

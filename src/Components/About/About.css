@@ -3,15 +3,21 @@
 }
 .about-content {
   display: flex;
+  justify-content: center;
   align-items: center;
   gap: 100px;
   padding: 50px 0;
 }
+.about-image {
+  max-width: 500px;
+  overflow: hidden;
+}
 .about-image img {
-  width: 550px;
+  width: 700px;
   height: 650px;
   object-fit: cover;
 }
+
 .about-info {
   width: 650px;
 }
@@ -67,7 +73,7 @@
   font-size: 10px;
   position: absolute;
   right: 20px;
-  top: 54%;
+  top: 50%;
   transform: translateY(-50%);
   transition: all 0.1s linear;
 }
@@ -93,6 +99,30 @@
 
 .about-button:hover::before {
   transform: scaleX(1) skewX(35deg);
+}
+
+@media screen and (min-width: 2000px) {
+  .about-image img {
+    width: 1000px;
+    height: 750px;
+  }
+  .about-heading {
+    font-size: 72px;
+  }
+  .about-desc {
+    font-size: 24px;
+  }
+  .about-text {
+    font-size: 20px;
+  }
+  .about-button {
+    padding: 28px 130px;
+    font-size: 20px;
+    border-radius: 30px;
+  }
+  .about-button i {
+    font-size: 20px;
+  }
 }
 @media screen and (max-width: 1279px) {
   .about {

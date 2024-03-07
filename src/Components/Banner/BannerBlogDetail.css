@@ -33,6 +33,23 @@
   object-fit: cover;
   border-radius: 50%;
 }
+@media screen and (min-width: 2000px) {
+  .banner-blog-detail-heading {
+    font-size: 92px;
+    padding: 0 0 40px 100px;
+  }
+  .banner-blog-detail-text {
+    font-size: 26px;
+  }
+  .banner-blog-detail-avatar {
+    width: 80px;
+    height: 80px;
+  }
+  .banner-blog-detail-name,
+  .banner-blog-detail-date {
+    font-size: 24px;
+  }
+}
 @media screen and (max-width: 1279px) {
   .banner-blog-detail-heading {
     font-size: 56px;

@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react';
+import React from 'react';
 import Banner from '../Banner/Banner';
 import Clip from '../Clip/Clip';
 import People from '../People/People';
@@ -7,30 +7,12 @@ import Services from '../Services/Services';
 import About from '../About/About';
 import Feedback from '../Feedback/Feedback';
 import Header from '../Header/Header';
+import content from '../../content.js';
 const titlePeople = [
   'Lorem ipsum dolor sit amet consectetur, adipisicing elit. Sint corrupti repellendus architecto fugit.',
 ];
 const Home = () => {
-  const [data, setData] = useState({
-    people: [],
-  });
-
-  useEffect(() => {
-    const fetchData = async () => {
-      try {
-        const peopleResponse = await fetch('http://localhost:3000/people');
-        const peopleData = await peopleResponse.json();
-        setData({
-          people: peopleData,
-        });
-      } catch (error) {
-        console.error('Error fetching data:', error);
-      }
-    };
-
-    fetchData();
-  }, []);
-  const people = data.people.find((item) => item.page === 'home') || {};
+  const people = content.people.find((item) => item.page === 'home') || {};
   return (
     <section className="home">
       <Header

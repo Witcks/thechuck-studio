@@ -1,5 +1,6 @@
 import React from 'react';
 import './Company.css';
+import { Link } from 'react-router-dom';
 
 const Company = () => {
   console.log(window.pageYOffset);
@@ -21,12 +22,12 @@ const Company = () => {
               projects, an introduction to company, insight into our values, and
               an understanding of how we can assist your business!
             </p>
-            <a
-              href="/about"
+            <Link
+              to="/about"
               className="company-button">
               <span>More about us</span>
               <i className="fas fa-arrow-right"></i>
-            </a>
+            </Link>
             <p className="company-text">*Worth a look, trust us.</p>
           </div>
         </div>

@@ -49,10 +49,6 @@
 .post-author-day {
   color: black;
 }
-@media screen and(max-width: 1279px) {
-}
-@media screen and(max-width: 1279px) {
-}
 .post {
   padding: 50px 0;
 }
@@ -103,6 +99,26 @@
 }
 .post-author-day {
   color: black;
+}
+@media screen and (min-width: 2000px) {
+  .post-image {
+    max-width: 700px;
+  }
+  .post-heading {
+    font-size: 64px;
+    max-width: 680px;
+  }
+  .post-desc {
+    font-size: 24px;
+  }
+  .post-author-avatar {
+    width: 80px;
+    height: 80px;
+  }
+  .post-author-name,
+  .post-author-day {
+    font-size: 24px;
+  }
 }
 @media screen and (max-width: 1279px) {
   .post-item {

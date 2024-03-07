@@ -76,7 +76,7 @@ img {
 }
 /* using rem unit */
 html {
-  font-size: 62.5%;
+  font-size: 1.1vw;
 }
 a {
   text-decoration: none;
@@ -93,10 +93,12 @@ body {
 li {
   list-style-type: none;
 }
+
 .container {
   max-width: 90%;
   margin: 0 auto;
 }
+
 @keyframes slideInFromLeft {
   0% {
     transform: translateX(-100%);
@@ -110,4 +112,11 @@ li {
 
 .animated-element {
   animation: slideInFromLeft 1s ease-out forwards;
+}
+
+@media screen and (min-width: 2000px) {
+  .container {
+    max-width: 1920px;
+    margin: 0 auto;
+  }
 }

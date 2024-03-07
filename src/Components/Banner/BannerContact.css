@@ -55,6 +55,21 @@
   height: 1px;
   background-color: #ffffff;
 }
+@media screen and (min-width: 2000px) {
+  .contact-banner-heading {
+    font-size: 120px;
+  }
+  .contact-banner-name {
+    font-size: 24px;
+  }
+  .contact-banner-job {
+    font-size: 24px;
+  }
+  .contact-banner-desc {
+    font-size: 24px;
+    max-width: 900px;
+  }
+}
 @media screen and (max-width: 1279px) {
   .contact-banner-bottom {
     display: block;
